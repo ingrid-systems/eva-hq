@@ -1,0 +1,17 @@
+{
+  "name": "eva-hq-content",
+  "version": "0.1.0",
+  "description": "Het contentsysteem van EVA HQ (Module 2): briefing, inspire, ideate, content-creator, repurpose en planner. In 1x installeren; werkt samen met je eigen save-skill uit Module 1.",
+  "author": {
+    "name": "Ingrid Staal"
+  },
+  "homepage": "https://e-va.nl",
+  "keywords": [
+    "eva hq",
+    "content systeem",
+    "content creator",
+    "content planner",
+    "repurpose",
+    "inspiratie"
+  ]
+}
