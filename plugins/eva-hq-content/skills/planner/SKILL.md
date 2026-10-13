@@ -1,6 +1,6 @@
 ---
 name: planner
-description: De maandplanner voor social content. Maakt aan het begin van de maand het skelet als lege items in de Content-database in Notion, vult per week de slots met een voorselectie, bouwt een lanceerbriefing als een lancering in beeld komt, en doet aan het eind van de maand de review. Plant alleen, schrijft geen posts; dat doen @content en @repurpose via hun route "uit het maandplan". TRIGGERS op @planner, "@planner maand", "@planner week", "@planner review", "maak mijn maandplan", "plan deze maand", "wat post ik deze week", "vul de slots van deze week", "welke posts staan er deze week", "maandreview", "hoe ging de contentmaand", "plan mijn lancering in", "lanceerplanning", of elke vraag om content voor een maand of week in te plannen, een lancering in de contentplanning te zetten, of terug te kijken op de contentmaand. Vereist planner.md uit de planner-intake (les 2) en de save-skill (voor de link van de systeempagina waar de Content-database op staat).
+description: De maandplanner voor social content. Maakt aan het begin van de maand het skelet als lege items in de Content-database in Notion, vult per week de slots met een voorselectie, bouwt een lanceerbriefing als een lancering in beeld komt, en doet aan het eind van de maand de review. Plant alleen, schrijft geen posts; dat doen @content en @repurpose via hun route "uit het maandplan". TRIGGERS op @planner, "@planner maand", "@planner week", "@planner review", "maak mijn maandplan", "plan deze maand", "wat post ik deze week", "vul de slots van deze week", "welke posts staan er deze week", "maandreview", "hoe ging de contentmaand", "plan mijn lancering in", "lanceerplanning", of elke vraag om content voor een maand of week in te plannen, een lancering in de contentplanning te zetten, of terug te kijken op de contentmaand. Vereist planner.md uit de planner-intake (de les 'Je planner-profiel') en de save-skill (voor de link van de systeempagina waar de Content-database op staat).
 ---
 
 # planner
@@ -23,7 +23,7 @@ Zegt de klant alleen `@planner`, kijk dan zelf wat aan de beurt is en zeg dat in
 
 Lees alleen wat de aanroep nodig heeft. Wijzig deze bronnen niet, behalve planner.md sectie 2, 6 en 7 waar deze skill dat expliciet zegt.
 
-1. `Resources/Fundament/planner.md`: ritme en platforms (sectie 1), bronverdeling (2), hergebruik (3), Bronarchief-reeksen (4), werkwijze met opties per slot en plaatsen per platform (5), etalage (6), koppelingen en paden (7). Ontbreekt het bestand, stop en verwijs naar de planner-intake van les 2; zonder profiel valt er niets te plannen.
+1. `Resources/Fundament/planner.md`: ritme en platforms (sectie 1), bronverdeling (2), hergebruik (3), Bronarchief-reeksen (4), werkwijze met opties per slot en plaatsen per platform (5), etalage (6), koppelingen en paden (7). Ontbreekt het bestand, stop en verwijs naar de planner-intake (de les 'Je planner-profiel'); zonder profiel valt er niets te plannen.
 2. `Resources/Fundament/strategie.md`: basismix over de vijf intent-pillars (sectie 3) en de topic-pillars (sectie 1).
 3. `Resources/Input/09 - Bestaande voorraad.md`: de indextabel bovenin, voor hergebruik-kandidaten en voor de Launch-posts van eerdere lanceringen.
 4. De Content-database in Notion. De `save`-skill is de ene persoonlijke bron voor de Notion-databases: laad die skill (zoals `@ideate` doet), lees daar de regel `Systeempagina:` en fetch die pagina. Dat geeft alle databases op die pagina met data source ID; pak de database die volgens de matchregel van de save-skill "Content" heet (naam uit de uitlegregel onder het blok, anders uit de titel van de data source). Zo hoeft een klant maar op één plek iets aan te passen. Na de eerste run staat de URL ook in planner.md sectie 7; lees hem daarna van daar. De Inspiratiedatabase (voor inspiratie-slots) haal je van dezelfde pagina, op de naam "Inspiratie" of "Inspiration".
@@ -34,7 +34,7 @@ Lees alleen wat de aanroep nodig heeft. Wijzig deze bronnen niet, behalve planne
 
 Doe dit één keer, en alleen wat nog ontbreekt. Controleer eerst, want de klant kan een stap al hebben gedaan.
 
-1. Bestaat `planner.md`? Nee: stop, verwijs naar les 2.
+1. Bestaat `planner.md`? Nee: stop, verwijs naar de les 'Je planner-profiel' (Content Planner).
 2. Staat het Content-database-ID al in planner.md sectie 7 (regel "Maandplan:")? Nee: bepaal het via de systeempagina uit de save-skill (zie "Wat je leest") en schrijf in sectie 7 de regel `Maandplan: [URL van de Content-database]` in plaats van `Maandplannen: Output/Planning/`. Zeg dat je dat gedaan hebt.
 3. Heeft de Content-database de eigenschappen Pillar, Bron, Etalage en Bestand? Voeg toe wat ontbreekt met één schema-update op de data source (ADD COLUMN-statements):
    - `Pillar` select: Authority, Vision, Connection, Embodiment, Launch
@@ -93,17 +93,19 @@ Lees `references/review.md`. In het kort: haal alle slots van de maand op, zet g
 
 - Alleen feedposts. Stories, mails en ads vallen buiten deze skill; het aftellen in stories tijdens een lancering loopt naast de feedslots, dat zeg je één keer bij de lanceerbriefing.
 - Het maandplan leeft alleen in Notion. Geen lokale spiegel, geen maandplan-bestand in de map; wat in Notion staat is de waarheid.
-- Getallen en voorkeuren komen uit planner.md en strategie.md. Verzin geen ritme, geen verdeling en geen termijn; ontbreekt iets, zeg dat en vraag het, of stuur terug naar les 2.
+- Getallen en voorkeuren komen uit planner.md en strategie.md. Verzin geen ritme, geen verdeling en geen termijn; ontbreekt iets, zeg dat en vraag het, of stuur terug naar de les 'Je planner-profiel'.
 - Vraag nooit iets dat je zelf kunt nakijken: of het skelet er al staat, of een eigenschap bestaat, of de vorige lancering een briefing heeft.
 - Wat je automatisch doet of juist niet kunt (de kalender wel, de weekweergave niet; de bestandsnaam komt van de maker, niet van jou), zeg je één keer in de chat op het moment dat het speelt, in plaats van het stil te noteren.
 - Voorstel eerst, dan pas schrijven. Het skelet, de lanceerbriefing en de review-aanpassingen gaan pas naar Notion of planner.md na een akkoord in de chat.
 
 ## Foutafhandeling
 
-- `planner.md` ontbreekt: stop, verwijs naar de planner-intake (les 2). Zonder profiel kun je geen ritme of verdeling afleiden en ga je die niet gokken.
-- Save-skill niet geïnstalleerd, geen link op de regel `Systeempagina:`, of geen database "Content" op die pagina: waarschijnlijk is Module 1 nog niet ingericht. Zeg wat er ontbreekt, verwijs naar les 5 en 7 van Module 1 (Business HQ-pagina en save-skill) en stop; zonder database is er geen plek voor het maandplan.
+- `planner.md` ontbreekt: stop, verwijs naar de planner-intake (de les 'Je planner-profiel'). Zonder profiel kun je geen ritme of verdeling afleiden en ga je die niet gokken.
+- Save-skill niet geïnstalleerd, geen link op de regel `Systeempagina:`, of geen database "Content" op die pagina: waarschijnlijk is Module 1 nog niet ingericht. Zeg wat er ontbreekt, verwijs naar de lessen 'Notion-templates installeren en personaliseren' en 'Skill inrichten: Save All (@save)' van Module 1 en stop; zonder database is er geen plek voor het maandplan.
 - Schema-update of aanmaken van de weergave faalt: meld het en geef de vier eigenschappen en de weergave-instelling zodat de klant ze zelf in Notion kan aanmaken; ga daarna gewoon door met het skelet.
-- Voorraadbestand ontbreekt of is ouder dan twee maanden: plan de hergebruik-slots wel, maar zeg bij de weekvulling dat de opties uit een verouderde of ontbrekende voorraad komen en verwijs naar les 1.
+- Voorraadbestand ontbreekt of is ouder dan twee maanden: plan de hergebruik-slots wel, maar zeg bij de weekvulling dat de opties uit een verouderde of ontbrekende voorraad komen en verwijs naar de les 'Je bestaande voorraad'.
 - Geen Bronarchief (sectie 4 op nee) terwijl de bronverdeling oogst bevat: meld de tegenstrijdigheid en stel voor de oogst-slots deze maand als hergebruik of eigen te plannen, of het profiel bij te werken.
 - Inspiratiedatabase leeg: zeg dat de inspiratie-slots deze week open staan en stel voor eerst `@ideate`, `@briefing` of `@inspire` te draaien, of het slot als eigen te vullen.
 - Een lancering in de etalage zonder datum of aanbod: doe de briefing niet op aannames, vraag de vier feiten en plan pas daarna.
+
+*Versie 13-10-2026: verwijzingen naar lessen op titel in plaats van nummer.*
