@@ -71,7 +71,7 @@ Per uitgewerkt idee één bestand: `Output/Content/JJJJ-MM-DD-[korte-slug].md`, 
 ## Foutafhandeling
 
 - Geen Inbox-items (route A): meld het, stel voor eerst `ideate`, `briefing` of `inspire` te draaien, of stap over op route B.
-- Save-skill niet geïnstalleerd, geen link op de regel `Systeempagina:`, of geen database "Inspiratie" op die pagina: dan kan route A niet zoeken. Zeg wat er ontbreekt, wijs op les 5 en 7 van Module 1 (Business HQ-pagina en save-skill) en bied aan ondertussen via route B verder te werken.
+- Save-skill niet geïnstalleerd, geen link op de regel `Systeempagina:`, of geen database "Inspiratie" op die pagina: dan kan route A niet zoeken. Zeg wat er ontbreekt, wijs op de lessen 'Notion-templates installeren en personaliseren' en 'Skill inrichten: Save All (@save)' van Module 1 en bied aan ondertussen via route B verder te werken.
 - Slot niet gevonden of niet op Scheduled (route C): geen skelet of geen weekvulling voor die datum. Verwijs naar `@planner maand` of `@planner week`, of bied route B aan voor een losse post.
 - Terugschrijven naar het slot faalt: meld dat het bestand wel lokaal staat maar het slot niet is bijgewerkt, en geef de slot-URL zodat de gebruiker status en bestandsnaam zelf kan zetten.
 - Dun item (alleen kern en INTENTIE, geen pillar of mechanisme): leid de pillar af uit de kern plus het topic-pillars document en draai de hook-voorstel-stap (stap 3) zoals normaal. Ontbreekt `hooks.md` of het topic-pillars document, ga door maar meld dat de invalshoek algemener is.
@@ -84,3 +84,5 @@ Per uitgewerkt idee één bestand: `Output/Content/JJJJ-MM-DD-[korte-slug].md`, 
 ---
 
 *Versie 30-09-2026: route C "uit het maandplan" (slot uit de Content-database van @planner, met terugschrijven van Bestand, Drafting en Review). De Inspiratie- en Content-database komen van de systeempagina uit de save-skill (regel `Systeempagina:`), op naam; geen ID's in deze skill. De content-bestemmingen komen uit strategie.md; de inrichtingsprompt is voor deze skill niet meer nodig.*
+
+*Versie 13-10-2026: verwijzingen naar lessen op titel in plaats van nummer.*
