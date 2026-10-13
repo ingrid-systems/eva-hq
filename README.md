@@ -4,6 +4,7 @@ Deze repo is de plugin-marketplace voor EVA HQ van Ingrid Staal. Je voegt de mar
 
 | Plugin | Module | Wat het is |
 |---|---|---|
+| `eva-hq-capture` | Module 1 | Het capture-systeem: de email-processor (@mail), van Gmail-label naar Notion-database. |
 | `eva-hq-content` | Module 2 | Het contentsysteem: briefing, inspire, ideate, content-creator, repurpose en planner. |
 
 ## Installeren (Claude chat, Claude Desktop, Cowork)
@@ -11,7 +12,7 @@ Deze repo is de plugin-marketplace voor EVA HQ van Ingrid Staal. Je voegt de mar
 1. Open **Customize** in de linker sidebar en ga naar de tab **Plugins**.
 2. Klik bij **Personal plugins** op de "+" en kies **Add marketplace**.
 3. Kies **Add from a repository** en plak: `https://github.com/ingrid-systems/eva-hq`
-4. Klik op **Install** bij `eva-hq-content`.
+4. Klik op **Install** bij de plugin van de module waar je mee bezig bent (`eva-hq-capture` voor Module 1, `eva-hq-content` voor Module 2).
 
 In Cowork open je eerst de Cowork-tab en daarna Customize.
 
@@ -19,18 +20,19 @@ In Cowork open je eerst de Cowork-tab en daarna Customize.
 
 ```
 /plugin marketplace add ingrid-systems/eva-hq
+/plugin install eva-hq-capture@ingrid-staal-eva-hq
 /plugin install eva-hq-content@ingrid-staal-eva-hq
 ```
 
 ## Gebruiken
 
-De skills reageren op hun eigen aanroep: `@briefing`, `@inspire`, `@ideate`, `@planner`, `@content`, `@repurpose`. Wat elke skill doet en wat je ervoor nodig hebt staat in `plugins/eva-hq-content/README.md`. De save-skill uit Module 1 blijft een losse skill met jouw eigen link erin; die zit bewust niet in deze plugin.
+De skills reageren op hun eigen aanroep: `@mail` (Module 1), `@briefing`, `@inspire`, `@ideate`, `@planner`, `@content`, `@repurpose` (Module 2). Wat elke skill doet en wat je ervoor nodig hebt staat in de README van de plugin (`plugins/<plugin>/README.md`). De save-skill uit Module 1 blijft een losse skill met jouw eigen link erin; die zit bewust in geen enkele plugin, omdat een plugin-update die link zou overschrijven.
 
 ## Een update publiceren
 
-1. Pas het SKILL.md-bestand aan in `plugins/eva-hq-content/skills/<skill-naam>/`.
+1. Pas het SKILL.md-bestand aan in `plugins/<plugin>/skills/<skill-naam>/`.
 2. Hoog het versienummer op in **twee** bestanden, met dezelfde waarde:
-   - `plugins/eva-hq-content/.claude-plugin/plugin.json`
+   - `plugins/<plugin>/.claude-plugin/plugin.json`
    - `.claude-plugin/marketplace.json` (het `version`-veld bij de plugin-entry)
 3. Commit en push.
 
