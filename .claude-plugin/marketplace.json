@@ -10,9 +10,9 @@
   },
   "plugins": [
     {
-      "name": "eva-hq-capture",
-      "source": "./plugins/eva-hq-capture",
-      "description": "Het capture-systeem van EVA HQ (Module 1): @mail zet gelabelde Gmail-mails in de juiste Notion-database. Werkt samen met je eigen save-skill uit Module 1; die blijft een losse download.",
+      "name": "eva-hq-inspiration",
+      "source": "./plugins/eva-hq-inspiration",
+      "description": "Module 1 van EVA HQ (Inspiration & Ideas, Catch All): @mail zet gelabelde Gmail-mails in de juiste Notion-database. Werkt samen met je eigen save-skill uit Module 1; die blijft een losse download.",
       "version": "0.1.0",
       "author": {
         "name": "Ingrid Staal"
@@ -21,11 +21,11 @@
       "category": "productivity",
       "tags": [
         "eva hq",
-        "capture",
+        "inspiration",
+        "catch all",
         "email processor",
         "gmail",
-        "notion",
-        "inspiratie"
+        "notion"
       ]
     },
     {

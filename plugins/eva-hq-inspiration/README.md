@@ -1,6 +1,6 @@
-# eva-hq-capture
+# eva-hq-inspiration
 
-Het capture-systeem van EVA HQ, Module 1. Eén skill: de email-processor. Mails die je in Gmail een label onder `CLAUDE/` geeft, zet @mail in de Notion-database met dezelfde naam, met jouw intentie in de Notities.
+Module 1 van EVA HQ, Inspiration & Ideas (Catch All). Eén skill: de email-processor. Mails die je in Gmail een label onder `CLAUDE/` geeft, zet @mail in de Notion-database met dezelfde naam, met jouw intentie in de Notities.
 
 | Skill | Aanroep | Wat het doet |
 |---|---|---|

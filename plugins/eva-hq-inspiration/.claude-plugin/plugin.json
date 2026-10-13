@@ -1,0 +1,17 @@
+{
+  "name": "eva-hq-inspiration",
+  "version": "0.1.0",
+  "description": "Module 1 van EVA HQ (Inspiration & Ideas, Catch All): @mail zet gelabelde Gmail-mails in de juiste Notion-database. Werkt samen met je eigen save-skill uit Module 1; die blijft een losse download.",
+  "author": {
+    "name": "Ingrid Staal"
+  },
+  "homepage": "https://e-va.nl",
+  "keywords": [
+    "eva hq",
+    "inspiration",
+    "catch all",
+    "email processor",
+    "gmail",
+    "notion"
+  ]
+}
