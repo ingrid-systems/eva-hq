@@ -5,7 +5,7 @@
   },
   "metadata": {
     "description": "EVA HQ van Ingrid Staal: per module een plugin met de skills van die module.",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "pluginRoot": "./plugins"
   },
   "plugins": [
@@ -32,7 +32,7 @@
       "name": "eva-hq-content",
       "source": "./plugins/eva-hq-content",
       "description": "Het contentsysteem van EVA HQ (Module 2): briefing, inspire, ideate, content-creator, repurpose en planner. In 1x installeren; werkt samen met je eigen save-skill uit Module 1.",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "author": {
         "name": "Ingrid Staal"
       },
@@ -45,6 +45,24 @@
         "content planner",
         "repurpose",
         "inspiratie"
+      ]
+    },
+    {
+      "name": "eva-hq-data",
+      "source": "./plugins/eva-hq-data",
+      "description": "Module 3 van EVA HQ (Data-analyse): @utm bouwt getagde links en registreert ze in je database UTM Links op je Business HQ-pagina. Werkt samen met je eigen save-skill uit Module 1; die blijft een losse download.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Ingrid Staal"
+      },
+      "homepage": "https://e-va.nl",
+      "category": "marketing",
+      "tags": [
+        "eva hq",
+        "data-analyse",
+        "utm",
+        "tracking",
+        "notion"
       ]
     }
   ]

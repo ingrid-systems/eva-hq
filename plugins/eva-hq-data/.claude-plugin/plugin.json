@@ -1,0 +1,16 @@
+{
+  "name": "eva-hq-data",
+  "version": "0.1.0",
+  "description": "Module 3 van EVA HQ (Data-analyse): @utm bouwt getagde links en registreert ze in je database UTM Links op je Business HQ-pagina. Werkt samen met je eigen save-skill uit Module 1; die blijft een losse download.",
+  "author": {
+    "name": "Ingrid Staal"
+  },
+  "homepage": "https://e-va.nl",
+  "keywords": [
+    "eva hq",
+    "data-analyse",
+    "utm",
+    "tracking",
+    "notion"
+  ]
+}

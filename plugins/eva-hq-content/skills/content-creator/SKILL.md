@@ -38,7 +38,7 @@ Per uitgewerkt idee één bestand: `Output/Content/JJJJ-MM-DD-[korte-slug].md`, 
    - **Bevestigen.** Wacht op bevestiging van het format, het haakje en het platform voordat je gaat schrijven. Het framework is stil gekozen, tenzij je het hebt voorgelegd.
 4. **Concept schrijven (de "before").** Schrijf één sterke versie in de Brand Voice. Volg de beats van het gekozen framework uit `frameworks.md` (bij carrousel de slide-mapping uit `carousel.md`), open met het gekozen hook-mechanisme uit `hooks.md`, en leg waar passend de villain-overlay uit `villain.md` eroverheen (sla 'm over als deze pillar geen villain heeft). Pas de platform-toon en de technische deltas uit `platforms.md` toe. Houd hook en body op de kwaliteitslat van `micro-specificity.md` (laag 3-4, concreet anker, vermijd de AI-vormen). Dit is het AI-concept, het vertrekpunt, niet het eindproduct.
 
-   **Links in het concept.** Komt er een link naar een aanbod, checkout, opt-in of landingspagina in de tekst, gebruik dan nooit de kale URL. Zoek in Notion de database "UTM Links" en kijk of er al een regel is voor deze plek: deze mail, deze post, dit kanaal. Bestaat die regel, gebruik dan de Volledige URL daaruit. Bestaat hij niet, roep dan de utm-skill aan om de link te bouwen en als regel op te slaan, en gebruik daarna die link.
+   **Links in het concept.** Komt er een link naar een aanbod, checkout, opt-in of landingspagina in de tekst, gebruik dan nooit de kale URL. Pak de database "UTM Links" van dezelfde systeempagina als de Inspiratiedatabase (stap 1, via de save-skill; naam uit de uitlegregel onder het blok) en kijk of er al een regel is voor deze plek: deze mail, deze post, dit kanaal. Bestaat die regel, gebruik dan de Volledige URL daaruit. Bestaat hij niet, roep dan de utm-skill aan om de link te bouwen en als regel op te slaan, en gebruik daarna die link.
 5. **Gebruiker herschrijft (de "after").** Nodig de gebruiker uit het concept te herschrijven in de eigen stem. Dit is essentieel: de eigen stem is de kern van het systeem. Ontvang de definitieve versie in de chat of geplakt. Herschrijft de gebruiker (nog) niet, ga door maar markeer in het bestand dat de definitieve versie nog ontbreekt.
 6. **Opslaan.** Schrijf `Output/Content/JJJJ-MM-DD-[slug].md` met dit format:
 
@@ -77,7 +77,7 @@ Per uitgewerkt idee één bestand: `Output/Content/JJJJ-MM-DD-[korte-slug].md`, 
 - Dun item (alleen kern en INTENTIE, geen pillar of mechanisme): leid de pillar af uit de kern plus het topic-pillars document en draai de hook-voorstel-stap (stap 3) zoals normaal. Ontbreekt `hooks.md` of het topic-pillars document, ga door maar meld dat de invalshoek algemener is.
 - Gebruiker herschrijft niet: sla het bestand op met alleen het concept, zet `status: concept` en noteer "nog te doen" bij de definitieve versie. Zet het Notion-item alsnog op `📝 → Content` (het idee is in behandeling).
 - Notion-update faalt: meld dat het bestand wel lokaal staat maar de status in Notion niet is bijgewerkt, en geef het item-URL zodat de gebruiker het handmatig kan verzetten.
-- UTM Links-database niet gevonden: gebruik de kale URL in het concept en meld dat deze link nog niet getagd is. De database wordt opgezet in de data-module.
+- Geen database "UTM Links" op de systeempagina: gebruik de kale URL in het concept en meld dat deze link nog niet getagd is. De database wordt opgezet in de les 'Werken met UTM-links' van de module Data-analyse.
 - Brand Voice Guide ontbreekt: ga door met algemene best practices, maar meld dat het concept minder afgestemd is op de eigen stem.
 - Fundament ontbreekt (`identiteit.md` of `strategie.md`): ga door met de Brand Voice en wat er wel is, maar meld dat de villain, anti-visie, grondtoon of mix niet meegenomen kon worden.
 
@@ -86,3 +86,5 @@ Per uitgewerkt idee één bestand: `Output/Content/JJJJ-MM-DD-[korte-slug].md`, 
 *Versie 30-09-2026: route C "uit het maandplan" (slot uit de Content-database van @planner, met terugschrijven van Bestand, Drafting en Review). De Inspiratie- en Content-database komen van de systeempagina uit de save-skill (regel `Systeempagina:`), op naam; geen ID's in deze skill. De content-bestemmingen komen uit strategie.md; de inrichtingsprompt is voor deze skill niet meer nodig.*
 
 *Versie 13-10-2026: verwijzingen naar lessen op titel in plaats van nummer.*
+
+*Versie 13-10-2026 (0.1.2): de database UTM Links komt van de systeempagina, net als Inspiratie en Content; geen zoeken meer door heel Notion.*
