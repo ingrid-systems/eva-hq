@@ -5,15 +5,15 @@
   },
   "metadata": {
     "description": "EVA HQ van Ingrid Staal: per module een plugin met de skills van die module.",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "pluginRoot": "./plugins"
   },
   "plugins": [
     {
       "name": "eva-hq-inspiration",
       "source": "./plugins/eva-hq-inspiration",
-      "description": "Module 1 van EVA HQ (Inspiration & Ideas, Catch All): @mail zet gelabelde Gmail-mails in de juiste Notion-database. Werkt samen met je eigen save-skill uit Module 1; die blijft een losse download.",
-      "version": "0.1.0",
+      "description": "Inspiration & Ideas (Catch All) van EVA HQ: @mail zet gelabelde Gmail-mails in de juiste Notion-database. Werkt samen met je eigen save-skill; die blijft een losse download.",
+      "version": "0.1.1",
       "author": {
         "name": "Ingrid Staal"
       },
@@ -31,8 +31,8 @@
     {
       "name": "eva-hq-content",
       "source": "./plugins/eva-hq-content",
-      "description": "Het contentsysteem van EVA HQ (Module 2): briefing, inspire, ideate, content-creator, repurpose en planner. In 1x installeren; werkt samen met je eigen save-skill uit Module 1.",
-      "version": "0.1.2",
+      "description": "Het contentsysteem van EVA HQ (Content Creation): briefing, inspire, ideate, content-creator, repurpose en planner. In 1x toevoegen; werkt samen met je eigen save-skill.",
+      "version": "0.1.3",
       "author": {
         "name": "Ingrid Staal"
       },
@@ -48,10 +48,30 @@
       ]
     },
     {
+      "name": "eva-hq-planning",
+      "source": "./plugins/eva-hq-planning",
+      "description": "De Personal Assistant van EVA HQ (Planning, agenda en to-do's): @planning plant je week en je dag vanuit de database Taken in Notion en je Google-agenda's. Week, dag en review. Werkt samen met je eigen save-skill en planning.md uit de voorbereidingslessen.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Ingrid Staal"
+      },
+      "homepage": "https://e-va.nl",
+      "category": "productivity",
+      "tags": [
+        "eva hq",
+        "planning",
+        "personal assistant",
+        "weekplanning",
+        "agenda",
+        "taken",
+        "notion"
+      ]
+    },
+    {
       "name": "eva-hq-data",
       "source": "./plugins/eva-hq-data",
-      "description": "Module 3 van EVA HQ (Data-analyse): @utm bouwt getagde links en registreert ze in je database UTM Links op je Business HQ-pagina. Werkt samen met je eigen save-skill uit Module 1; die blijft een losse download.",
-      "version": "0.1.0",
+      "description": "Data-analyse van EVA HQ: @utm bouwt getagde links en registreert ze in je database UTM Links op je Business HQ-pagina. Werkt samen met je eigen save-skill; die blijft een losse download.",
+      "version": "0.1.1",
       "author": {
         "name": "Ingrid Staal"
       },

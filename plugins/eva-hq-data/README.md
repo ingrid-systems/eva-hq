@@ -1,6 +1,6 @@
 # eva-hq-data
 
-Module 3 van EVA HQ, Data-analyse. Eén skill: de utm-skill. Met @utm bouw je een getagde link volgens vaste naamregels en zet je hem direct in je linkregister in Notion.
+Data-analyse van EVA HQ. Eén skill: de utm-skill. Met @utm bouw je een getagde link volgens vaste naamregels en zet je hem direct in je linkregister in Notion.
 
 | Skill | Aanroep | Wat het doet |
 |---|---|---|
@@ -9,7 +9,7 @@ Module 3 van EVA HQ, Data-analyse. Eén skill: de utm-skill. Met @utm bouw je ee
 ## Wat je nodig hebt
 
 - Claude met Notion gekoppeld.
-- De save-skill uit Module 1, geïnstalleerd en ingericht als losse skill. Die bevat de link van je Business HQ-pagina; @utm leest die regel en vindt daar je database. Zonder save-skill doet @utm niets.
+- De save-skill, geïnstalleerd en ingericht als losse skill (de les "Skill inrichten: Save All (@save)"). Die bevat de link van je Business HQ-pagina; @utm leest die regel en vindt daar je database. Zonder save-skill doet @utm niets.
 - De database "UTM Links" op je Business HQ-pagina, met een uitlegregel eronder die met de naam begint. Die zet je op in de les "Werken met UTM-links".
 
 ## Waarom de save-skill niet in deze plugin zit

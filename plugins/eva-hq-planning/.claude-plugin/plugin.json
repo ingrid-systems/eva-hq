@@ -1,0 +1,18 @@
+{
+  "name": "eva-hq-planning",
+  "version": "0.1.0",
+  "description": "De Personal Assistant van EVA HQ (Planning, agenda en to-do's): @planning plant je week en je dag vanuit de database Taken in Notion en je Google-agenda's. Week, dag en review. Werkt samen met je eigen save-skill en planning.md uit de voorbereidingslessen.",
+  "author": {
+    "name": "Ingrid Staal"
+  },
+  "homepage": "https://e-va.nl",
+  "keywords": [
+    "eva hq",
+    "planning",
+    "personal assistant",
+    "weekplanning",
+    "agenda",
+    "taken",
+    "notion"
+  ]
+}
