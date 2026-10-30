@@ -11,7 +11,7 @@ De Personal Assistant van EVA HQ, module Planning. Eén skill, drie aanroepen.
 ## Wat je nodig hebt
 
 - De drie voorbereidingslessen van de module Planning gedaan: de werkmap Operations/Planning met `Resources/Fundament/planning.md`, de database Taken op je Business HQ-pagina, en je weekindeling als blokken in een eigen Google-agenda.
-- De les "Je bronnen aansluiten" gedaan: sectie 6 Bronnen in planning.md.
+- De les "Alle input verzamelen" gedaan: sectie 6 Bronnen in planning.md.
 - De save-skill, geïnstalleerd als losse skill (de les "Skill inrichten: Save All (@save)"). Die bevat de link van je Business HQ-pagina; @planning vindt je Taken-database via die ene link.
 - De koppelingen: Notion en Google Agenda. Gmail als je mails als taak binnenhaalt; de connector van je eigen planningstool als je die in de les "Externe bronnen aansluiten" hebt aangesloten.
 
