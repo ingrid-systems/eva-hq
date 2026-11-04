@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "salespage-generator": {
+      "type": "http",
+      "url": "https://salespage-mcp-server.vercel.app/api/mcp"
+    }
+  }
+}

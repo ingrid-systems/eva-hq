@@ -8,6 +8,7 @@ Deze repo is de plugin-marketplace voor EVA HQ van Ingrid Staal. Je voegt de mar
 | `eva-hq-content` | Content Creation | Het contentsysteem: briefing, inspire, ideate, content-creator, repurpose en planner. |
 | `eva-hq-planning` | Planning (agenda en to-do's) | De Personal Assistant (@planning): weekplanning, dagstart en weekreview vanuit Taken in Notion en je Google-agenda's. |
 | `eva-hq-data` | Data-analyse | De utm-skill (@utm), getagde links in je linkregister UTM Links. |
+| `eva-hq-assistants` | HQ Assistants | De Salespage Assistant (@salespage): LOES AI B*tch, de salespagina-generator van Marloes, die je aanbod uit About Me leest. Levert een koppeling mee die je apart activeert. |
 
 ## Toevoegen (claude.ai en de Claude-app)
 
@@ -24,11 +25,12 @@ Deze repo is de plugin-marketplace voor EVA HQ van Ingrid Staal. Je voegt de mar
 /plugin install eva-hq-content@ingrid-staal-eva-hq
 /plugin install eva-hq-planning@ingrid-staal-eva-hq
 /plugin install eva-hq-data@ingrid-staal-eva-hq
+/plugin install eva-hq-assistants@ingrid-staal-eva-hq
 ```
 
 ## Gebruiken
 
-De skills reageren op hun eigen aanroep: `@mail`, `@briefing`, `@inspire`, `@ideate`, `@planner`, `@content`, `@repurpose`, `@planning`, `@utm`. Wat elke skill doet en wat je ervoor nodig hebt staat in de README van de plugin (`plugins/<plugin>/README.md`). De save-skill blijft een losse skill met jouw eigen link erin; die zit bewust in geen enkele plugin, omdat een plugin-update die link zou overschrijven.
+De skills reageren op hun eigen aanroep: `@mail`, `@briefing`, `@inspire`, `@ideate`, `@planner`, `@content`, `@repurpose`, `@planning`, `@utm`, `@salespage`. Wat elke skill doet en wat je ervoor nodig hebt staat in de README van de plugin (`plugins/<plugin>/README.md`). De save-skill blijft een losse skill met jouw eigen link erin; die zit bewust in geen enkele plugin, omdat een plugin-update die link zou overschrijven.
 
 ## Een update publiceren
 

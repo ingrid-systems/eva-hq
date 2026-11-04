@@ -1,0 +1,18 @@
+{
+  "name": "eva-hq-assistants",
+  "version": "0.1.0",
+  "description": "De assistenten van EVA HQ (module HQ Assistants): uitvoerende skills die voor elke medewerker werken en zelf nergens in een map schrijven. Nu: de Salespage Assistant (LOES AI B*tch, partnerskill van Marloes), die je Ideale Salespagina blok voor blok schrijft op basis van je Offer Snapshot, je Ideale Klant Profiel en je Brand Voice Guide uit About Me. De vragen en schrijfinstructies per blok komen live van de server van Marloes.",
+  "author": {
+    "name": "Ingrid Staal"
+  },
+  "homepage": "https://e-va.nl",
+  "keywords": [
+    "eva hq",
+    "assistants",
+    "salespagina",
+    "salespage",
+    "verkooppagina",
+    "copywriting",
+    "loes ai bitch"
+  ]
+}
