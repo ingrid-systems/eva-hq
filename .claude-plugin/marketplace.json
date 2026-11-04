@@ -5,7 +5,7 @@
   },
   "metadata": {
     "description": "EVA HQ van Ingrid Staal: per module een plugin met de skills van die module.",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "pluginRoot": "./plugins"
   },
   "plugins": [
@@ -89,7 +89,7 @@
       "name": "eva-hq-assistants",
       "source": "./plugins/eva-hq-assistants",
       "description": "De assistenten van EVA HQ (module HQ Assistants). Nu: de Salespage Assistant (LOES AI B*tch, partnerskill van Marloes), die je Ideale Salespagina blok voor blok schrijft op basis van je Offer Snapshot, je Ideale Klant Profiel en je Brand Voice Guide uit About Me. De vragen en schrijfinstructies per blok komen live van de server van Marloes.",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "author": {
         "name": "Ingrid Staal"
       },
