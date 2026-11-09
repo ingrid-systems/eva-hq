@@ -2,7 +2,7 @@
 
 De villain-overlay voor de Content Creator. Geen framework en geen posttype, maar een lens die over een framework heen ligt en door de hele post heen werkt.
 
-De villain is al bepaald in de voorbereiding (de villain-les van Module 2) en geconsolideerd in het fundament `identiteit.md`. Het ruwe les-document staat in `Resources/Input/05 - Villain.md`, de gedistilleerde versie plus de grondtoon-defaults in `Resources/Fundament/identiteit.md`. Daar zijn ook de vier villain-typen (waaronder De Veilige Middenweg) aan bod gekomen: dat is een keuze-instrument voor die les, niet voor deze skill. Hier kies of classificeer je niets meer. Je leest de villain die bij deze post hoort en weeft hem door de post.
+De villain is al bepaald in de voorbereiding (de les Jouw Villain of anti-visie) en geconsolideerd in het fundament `identiteit.md`. Het ruwe les-document staat in `Resources/Input/05 - Villain.md`, de gedistilleerde versie plus de grondtoon-defaults in `Resources/Fundament/identiteit.md`. Daar zijn ook de vier villain-typen (waaronder De Veilige Middenweg) aan bod gekomen: dat is een keuze-instrument voor die les, niet voor deze skill. Hier kies of classificeer je niets meer. Je leest de villain die bij deze post hoort en weeft hem door de post.
 
 In dit document: "de gebruiker" bedient de creator. "De lezer" of "de klant" is de doelgroep die de post aanspreekt.
 
