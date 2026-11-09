@@ -29,7 +29,7 @@ Deze skill heeft geen eigen engine. Ze leest de engine-bestanden uit de map `con
    - de Brand Voice Guide uit About Me
    - het fundament in `Resources/Fundament/` van de werkmap van je Content Manager: `identiteit.md` (stem, villain, anti-visie, grondtoon) en `strategie.md` (pillars, mix)
    - de engine uit de content-creator skillmap (zie Vereisten)
-   - de eigen contentvoorbeelden per platform in `Resources/Input/06 - Contentvoorbeelden/[platform]/`
+   - de eigen contentvoorbeelden per platform in `Resources/Input/06 - Contentvoorbeelden/[platform]/`. Staat daar een `_index.md` met alleen URL's (Instagram, LinkedIn), zoek die URL's dan op in `Resources/Input/12 - Bestaande voorraad.md` (herken het bestand aan de naam, ook bij een ander nummer) en lees daar de volledige tekst, slidetekst en transcript van die posts; bestanden met tekst (E-mail, Overig) lees je direct
    - het topic-pillars document in `Resources/Input/`
 3. **Output-map:** `Output/Content/` in de werkmap van je Content Manager. Maak de map aan als die nog niet bestaat.
 
