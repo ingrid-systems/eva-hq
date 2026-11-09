@@ -21,17 +21,17 @@ Deze skill heeft geen eigen engine. Ze leest de engine-bestanden uit de map `con
 
 1. **Het anker.** Eén stuk longform, aangeleverd als:
    - geplakte tekst in de chat (transcript, artikel, nieuwsbrief, aantekeningen),
-   - een bestand in de projectmap (bijvoorbeeld een transcript uit `@transcribe`),
+   - een bestand in de werkmap (bijvoorbeeld een transcript uit `@transcribe`),
    - of een URL (ophalen en de kerntekst extraheren).
    - of een **oogst-slot uit het maandplan** (route C): een item in de Content-database in Notion (laad de `save`-skill, de ene persoonlijke bron voor de databases, lees daar de regel `Systeempagina:`, fetch die pagina en pak de database die volgens de matchregel van de save-skill "Content" heet) met `Status = 📅 Scheduled` en `Bron = Oogst`, waarvan de Notities de reeks en de aflevering uit het Bronarchief noemen; het anker is dan dat bestand.
    Geen anker aangeleverd: vraag ernaar ("Wat wil je hergebruiken? Plak de tekst, wijs een bestand aan of geef een URL.").
 2. **Context** (lezen, niet wijzigen), dezelfde bronnen als de Content Creator:
    - de Brand Voice Guide uit About Me
-   - het fundament in de projectmap: `identiteit.md` (stem, villain, anti-visie, grondtoon) en `strategie.md` (pillars, mix)
+   - het fundament in `Resources/Fundament/` van de werkmap van je Content Manager: `identiteit.md` (stem, villain, anti-visie, grondtoon) en `strategie.md` (pillars, mix)
    - de engine uit de content-creator skillmap (zie Vereisten)
    - de eigen contentvoorbeelden per platform in `Resources/Input/06 - Contentvoorbeelden/[platform]/`
    - het topic-pillars document in `Resources/Input/`
-3. **Output-map:** `Output/Content/` in de projectmap. Maak de map aan als die nog niet bestaat.
+3. **Output-map:** `Output/Content/` in de werkmap van je Content Manager. Maak de map aan als die nog niet bestaat.
 
 ## Output
 

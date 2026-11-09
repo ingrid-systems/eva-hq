@@ -1,7 +1,7 @@
 ---
 name: briefing
 description: Nieuwsbriefing op basis van keywords uit het vakgebied van de gebruiker. Zoekt over Substack, YouTube, LinkedIn en Google News, filtert op relevantie en schrijft naar een staging-bestand dat daarna met @ideate verwerkt wordt. TRIGGERS op @briefing, "AI briefing", "nieuws briefing", "wat is er nieuw", "nieuws vandaag", "briefing maken", "topic briefing", "zoek nieuws", "wat heb ik gemist", of elke vraag over het ophalen en samenvatten van recent vaknieuws op onderwerp.
-version: "1.0"
+version: "1.1"
 ---
 
 # briefing
@@ -10,7 +10,7 @@ Verzamelskill. Zoekt recent vaknieuws op basis van keywords over meerdere platfo
 
 ## Inputs
 
-Lees uit `Resources/Input/` van de actieve Content Creator-projectmap:
+Lees uit `Resources/Input/` van de werkmap van je Content Manager (de les "Je werkmap klaarzetten"). Herken het bestand aan zijn naam, ook als het nummer ervoor afwijkt:
 
 - `10 - Briefing keywords.md` — vakinhoudelijke keywords (komma-gescheiden of bullets). Ontbreekt het bestand of is het leeg: meld dat er geen keywords zijn en vraag de gebruiker ze aan te leveren. Verzin zelf geen keywords.
 
@@ -53,7 +53,7 @@ Bronnen: [...]
 2. Haal per bron op (één call per keyword-set per bron):
    - Substack: `easyapi/substack-posts-scraper` → `{ "keywords": [...], "maxItems": 10 }`. Velden: `title`, `subtitle`, `description`, `truncated_body_text`, `canonical_url`, `post_date`, `publishedBylines[0]`, `reaction_count`, `comment_count`.
    - YouTube: `grow_media/youtube-search-api`, één call per keyword → `{ "q": "<term>", "maxResults": 5, "order": "date", "publishedAfter": "<7 dagen geleden, RFC 3339>", "relevanceLanguage": "en" }`. Velden: `title`, `text`, `url`, `channelName`, `date`, `viewCount`, `likes`, `duration`.
-   - LinkedIn: `apimaestro/linkedin-posts-search-scraper-no-cookies` → `{ "keyword": "<term>", "totalPostsToScrape": 5, "sort_by": "date_posted" }`. Velden: `text`, `post_url`, `author`, `stats`, `posted_at.date`, `hashtags`.
+   - LinkedIn: `apimaestro/linkedin-posts-search-scraper-no-cookies` → `{ "keyword": "<term>", "limit": 10, "date_filter": "past-week", "sort_type": "date_posted" }`. Gebruik precies deze veldnamen: `limit` (1-50, begrenzing per call), `date_filter` (`past-week` voor het 7-daagse venster; levert minder dan `limit` als er weinig verse posts zijn) en `sort_type` (`date_posted`). Velden als `totalPostsToScrape` of `sort_by` kent de actor niet; hij negeert ze en valt terug op 50 resultaten per keyword, wat onnodig kosten maakt. Velden: `text`, `post_url`, `author`, `stats`, `posted_at.date`, `hashtags`.
    - Google News: `web_fetch` op `https://news.google.com/rss/search?q=<term>&hl=en&gl=US&ceid=US:en`, parse `<title>`, `<link>`, `<pubDate>`, `<source>`. Alleen voor de 2 tot 3 meest relevante keywords.
 3. Filter items met een publicatiedatum op of vóór de laatste-run-datum weg. Dedupliceer, scoor elk resterend item tegen de filterinstructie, prioriteer op laatste 7 dagen, sorteer op relevantie en datum, selecteer top 10 tot 15.
 4. Stel de briefing samen, schrijf naar het staging-bestand, toon in de chat en sluit af met de @ideate-verwijzing.

@@ -5,18 +5,18 @@ description: De dagelijkse content-skill. Werkt langs drie routes: route A vanui
 
 # content-creator
 
-Creatie-skill. Werkt vanuit een opgeslagen idee (route A), een directe opdracht van de gebruiker (route B) of een gepland slot uit het maandplan (route C), stelt samen met de gebruiker een mini-brief op, schrijft een concept in de Brand Voice, laat de gebruiker dat herschrijven in de eigen stem, en bewaart concept en definitieve versie als één before/after-bestand in de projectmap. De ideeën leven in Notion, de uitwerkingen lokaal.
+Creatie-skill. Werkt vanuit een opgeslagen idee (route A), een directe opdracht van de gebruiker (route B) of een gepland slot uit het maandplan (route C), stelt samen met de gebruiker een mini-brief op, schrijft een concept in de Brand Voice, laat de gebruiker dat herschrijven in de eigen stem, en bewaart concept en definitieve versie als één before/after-bestand in de werkmap van je Content Manager. De ideeën leven in Notion, de uitwerkingen lokaal.
 
 ## Inputs
 
 1. Idee, opdracht of slot. Route A: een idee uit de Notion Inspiratiedatabase, alleen items met `Status = 📥 Inbox`, onder andere geschreven door `ideate`. De `save`-skill is de ene persoonlijke bron voor de Notion-databases: laad die skill (zoals `@ideate` doet), lees daar de regel `Systeempagina:` en fetch die pagina. Dat geeft alle databases op die pagina met data source ID; pak de database die volgens de matchregel van de save-skill "Inspiratie" of "Inspiration" heet (naam uit de uitlegregel onder het blok, anders uit de titel van de data source). De statuswaarden staan in het schema van de gevonden database. Zo staat er niets workspace-specifieks in deze skill en past een klant alleen de save-skill aan. Route B: een directe opdracht van de gebruiker ("schrijf een post over X"), met eventueel eigen instructies (invalshoek, punten, format, platform). Geen database nodig. Route C: een slot uit het maandplan dat `@planner` heeft gevuld: een item in de Content-database in Notion (van dezelfde systeempagina, op de naam "Content") met `Status = 📅 Scheduled`, een Publicatie-datum, Platform, Pillar, Bron en in Notities de gekozen optie en de herkomst.
 2. Context (lezen, niet wijzigen), om in de Brand Voice te schrijven:
    - de Brand Voice Guide uit About Me (tone, woordkeuze, ritme, do's en don'ts)
-   - het fundament in de projectmap: `identiteit.md` (stem, villain, anti-visie, grondtoon) en `strategie.md` (pillars, mix, en de regel `Content-bestemmingen:` die bepaalt welke Bestemming-waarden route A toont)
+   - het fundament in `Resources/Fundament/` van de werkmap van je Content Manager: `identiteit.md` (stem, villain, anti-visie, grondtoon) en `strategie.md` (pillars, mix, en de regel `Content-bestemmingen:` die bepaalt welke Bestemming-waarden route A toont)
    - de engine in de skillmap: `hooks.md` (5 mechanismen), `frameworks.md` (frameworks plus video-skeletten), `carousel.md` (rendering), `villain.md` (overlay), `platforms.md` (platform-laag) en `micro-specificity.md` (diepte-lat plus AI-vormen)
    - de eigen contentvoorbeelden per platform in `Resources/Input/06 - Contentvoorbeelden/[platform]/`
    - het topic-pillars document in `Resources/Input/`
-3. Output-map: `Output/Content/` in de projectmap. Maak de map aan als die nog niet bestaat.
+3. Output-map: `Output/Content/` in de werkmap van je Content Manager. Maak de map aan als die nog niet bestaat.
 
 ## Output
 

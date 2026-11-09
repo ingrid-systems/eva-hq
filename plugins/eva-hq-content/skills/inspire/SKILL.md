@@ -1,7 +1,7 @@
 ---
 name: inspire
 description: Content creatie-inspiratie op basis van zoektermen en optioneel eigen creators. Zoektermen-scan op Instagram (hashtags) en YouTube (keywords) naar trending formats en hooks, plus een optionele scan van vooraf vastgelegde creators. Verzamelt en schrijft naar een staging-bestand dat daarna met @ideate verwerkt wordt. TRIGGERS op @inspire, "content inspiratie", "inspiratie zoeken", "wat werkt op Instagram", "trending content", "content ideeën", "wat posten anderen", "content research", "hashtag research", "scan mijn creators", "creators bekijken", of elke vraag over het verzamelen van content-inspiratie.
-version: "1.0"
+version: "1.1"
 ---
 
 # inspire
@@ -10,7 +10,7 @@ Verzamelskill. Haalt content-inspiratie binnen en schrijft die naar een staging-
 
 ## Inputs
 
-Lees uit `Resources/Input/` van de actieve Content Creator-projectmap:
+Lees uit `Resources/Input/` van de werkmap van je Content Manager (de les "Je werkmap klaarzetten"). Herken de bestanden aan hun naam, ook als het nummer ervoor afwijkt:
 
 - `11 - Inspire zoektermen.md` — Instagram-hashtags en YouTube-zoektermen. Ontbreekt het bestand of is het leeg: meld dat er geen zoektermen zijn en vraag de gebruiker ze aan te leveren. Verzin zelf geen zoektermen.
 - `09 - Inspirerende creators.md` — creators in de vorm `- [Naam] - [platform]: [URL]`.
@@ -40,23 +40,30 @@ Format van het staging-bestand:
 [per post: hook | format | engagement | link]
 ```
 
+## Kostenbewaking
+
+Elke Apify-actor rekent per opgehaald resultaat, sommige ook per start. Controleer daarom vóór elke actor-call dat het limietveld de naam heeft die hieronder staat en gevuld is; een verkeerde of lege limiet betekent bij de meeste actors "onbeperkt" en scrapet dan de volledige geschiedenis. Haal niet meer posts op dan de skill voorschrijft.
+
 ## Procedure
 
 ### Deel A — Zoektermen-scan
 
-Draait altijd, tenzij de chat-override `creators` is gebruikt. Maximaal 3 tot 4 hashtags per run.
+Draait altijd, tenzij de chat-override `creators` is gebruikt. Gebruik alle hashtags uit bestand 11 (of de chat-override) in één Instagram-call, met 10 resultaten per hashtag: één actor-start en zo min mogelijk posts.
 
 1. Bepaal de dedupe-set: zoek het meest recente eerdere `inspire-*.md` in `Output/Inspiratie-staging/` (ook `*-verwerkt.md`) en verzamel de post-URL's die daarin staan. Geen eerder bestand: lege set. Dit is het rollende geheugen; je vergelijkt alleen met de vorige run, niet met alle history.
-2. Instagram: roep `burbn/instagram-hashtag-posts-scraper` aan, één call per hashtag:
+2. Instagram: roep `apify/instagram-hashtag-scraper` aan met alle hashtags in één call:
    ```json
-   { "hashtag": "<term>", "maxResults": 10 }
+   { "hashtags": ["<term1>", "<term2>", "..."], "resultsType": "posts", "resultsLimit": 10 }
    ```
-   Velden: `caption`, `postUrl`, `likeCount`, `commentCount`, `mediaType`, `isVideo`, `postedAt`, `accessibilityCaption`.
+   Velden: `caption`, `url`, `likesCount`, `commentsCount`, `type`, `videoViewCount`, `timestamp`, `alt`, `ownerUsername`.
+   `resultsLimit` is het aantal posts per hashtag. Zet dit op 10, niet hoger, tenzij de gebruiker om meer vraagt.
+   Let op: op een gratis Apify-plan levert deze actor alleen de eerste pagina resultaten. 10 per hashtag valt daar normaal binnen; controleer bij de eerste run of elke hashtag posts teruggeeft en meld het als een hashtag leeg blijft.
 3. YouTube: roep `grow_media/youtube-search-api` aan, één call per zoekterm:
    ```json
    { "q": "<term>", "maxResults": 5, "order": "viewCount", "publishedAfter": "<30 dagen geleden, RFC 3339>" }
    ```
    Velden: `title`, `text`, `url`, `channelName`, `viewCount`, `likes`, `commentsCount`, `duration`, `date`.
+   Let op: deze actor respecteert `publishedAfter` niet altijd strikt; filter zelf op `date` en laat resultaten ouder dan 30 dagen vallen.
 4. Laat posts vallen waarvan de URL al in de dedupe-set staat.
 5. Bepaal per overgebleven item het format, de hook (eerste regel/titel) en de engagement. Schrijf onder `## Zoektermen-scan`.
 
@@ -68,9 +75,9 @@ Scrape incrementeel: per creator alleen posts die nieuwer zijn dan de vorige run
 
 Voer het zware werk uit in subagents zodat de hoofdcontext schoon blijft. Per creator uit bestand 09, op basis van het platform in de regel. Eerste run voor een creator (geen entry in `_creator-state.json`): nieuwste 15 tot 25 posts als basislijn. Vervolgrun: alleen posts nieuwer dan `laatste_post_timestamp`, dedupe op shortCode/URL, begrens op 50 nieuwe posts en meld als die grens is geraakt.
 
-1. Scrape, per platform met de bijbehorende actor:
+1. Scrape, per platform met de bijbehorende actor. Vul altijd het limietveld met de naam die hier staat, anders scrapet de actor onbeperkt:
    - **Instagram** — `apify/instagram-scraper`: `{ "directUrls": ["<profiel-URL>"], "resultsType": "posts", "resultsLimit": 25 }`. Filter op `timestamp` nieuwer dan `laatste_post_timestamp`. Haal daarna per reel de on-screen hook op via OCR: `zen-studio/google-lens-ocr` met `{ "imageUrl": "<displayUrl>", "language": "<taal van de creator, bv. en of nl>", "outputDetail": "text_only" }`, in batches van maximaal 10, binnen de subagent.
-   - **LinkedIn** — `supreme_coder/linkedin-post`: `{ "urls": ["<profiel- of bedrijfs-URL>"], "maxPosts": 25 }`. Filter op `postedAtISO` nieuwer dan `laatste_post_timestamp`. De volledige `text` is de hook, geen OCR.
+   - **LinkedIn** — `supreme_coder/linkedin-post`: `{ "urls": ["<profiel- of bedrijfs-URL>"], "limitPerSource": 25 }`. Het limietveld heet `limitPerSource`, niet `maxPosts`; met een verkeerde naam of leeg veld haalt de actor de volledige profielgeschiedenis op (kan honderden posts zijn). Bij een vervolgrun: voeg `"scrapeUntil": "<laatste_post_timestamp>"` toe, zodat de actor alleen nieuwere posts ophaalt in plaats van alles op te halen en achteraf te filteren. Filter daarna alsnog op `postedAtISO` nieuwer dan `laatste_post_timestamp`. De volledige `text` is de hook, geen OCR.
    - **YouTube** — `streamers/youtube-scraper`: `{ "startUrls": [{ "url": "<kanaal-URL>" }], "sortVideosBy": "NEWEST", "maxResults": 25, "downloadSubtitles": false }`. Voeg bij een vervolgrun `"oldestPostDate": "<laatste_post_timestamp>"` toe om alleen nieuwere video's te halen. `title` en de omschrijving (`text`) zijn de hook, geen OCR. Transcript komt pas in @ideate op de keepers.
 2. Retry: posts die niet binnenkomen opnieuw ophalen, maximaal twee pogingen per post. Log in het staging-bestand wat na twee pogingen ontbreekt.
 3. De subagent retourneert compact (per post: shortCode/URL, type, engagement, hook, datum), geen ruwe JSON.
