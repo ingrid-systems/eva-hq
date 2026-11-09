@@ -31,6 +31,7 @@ Deze skill heeft geen eigen engine. Ze leest de engine-bestanden uit de map `con
    - de engine uit de content-creator skillmap (zie Vereisten)
    - de eigen contentvoorbeelden per platform in `Resources/Input/06 - Contentvoorbeelden/[platform]/`. Staat daar een `_index.md` met alleen URL's (Instagram, LinkedIn), zoek die URL's dan op in `Resources/Input/12 - Bestaande voorraad.md` (herken het bestand aan de naam, ook bij een ander nummer) en lees daar de volledige tekst, slidetekst en transcript van die posts; bestanden met tekst (E-mail, Overig) lees je direct
    - het topic-pillars document in `Resources/Input/`
+   - de klanttaal in `Resources/Input/07 - Voice of the Customer/` (reviews, quotes, vragen van klanten, en `_overzicht.md` met de bronnen die elders staan): gebruik de letterlijke woorden van klanten voor hooks, pijnpunten en verlangens, en verzin er geen bij
 3. **Output-map:** `Output/Content/` in de werkmap van je Content Manager. Maak de map aan als die nog niet bestaat.
 
 ## Output

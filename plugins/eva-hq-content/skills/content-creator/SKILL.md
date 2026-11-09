@@ -16,6 +16,7 @@ Creatie-skill. Werkt vanuit een opgeslagen idee (route A), een directe opdracht 
    - de engine in de skillmap: `hooks.md` (5 mechanismen), `frameworks.md` (frameworks plus video-skeletten), `carousel.md` (rendering), `villain.md` (overlay), `platforms.md` (platform-laag) en `micro-specificity.md` (diepte-lat plus AI-vormen)
    - de eigen contentvoorbeelden per platform in `Resources/Input/06 - Contentvoorbeelden/[platform]/`. Staat daar een `_index.md` met alleen URL's (Instagram, LinkedIn), zoek die URL's dan op in `Resources/Input/12 - Bestaande voorraad.md` (herken het bestand aan de naam, ook bij een ander nummer) en lees daar de volledige tekst, slidetekst en transcript van die posts; bestanden met tekst (E-mail, Overig) lees je direct
    - het topic-pillars document in `Resources/Input/`
+   - de klanttaal in `Resources/Input/07 - Voice of the Customer/` (reviews, quotes, vragen van klanten, en `_overzicht.md` met de bronnen die elders staan): gebruik de letterlijke woorden van klanten voor hooks, pijnpunten en verlangens, en verzin er geen bij
 3. Output-map: `Output/Content/` in de werkmap van je Content Manager. Maak de map aan als die nog niet bestaat.
 
 ## Output
