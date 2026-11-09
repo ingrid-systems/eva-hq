@@ -23,6 +23,10 @@ Creatie-skill. Werkt vanuit een opgeslagen idee (route A), een directe opdracht 
 
 Per uitgewerkt idee één bestand: `Output/Content/JJJJ-MM-DD-[korte-slug].md`, met een kop-blok en twee tekstblokken (concept en definitief). Zie stap 6 voor het format.
 
+## Jouw werkwijze
+
+Lees vóór je begint `Resources/Fundament/werkwijze.md` in de werkmap van je Content Manager, als dat bestand er is, en daarin het kopje `## @content`. Wat daar staat is hoe de gebruiker wil dat deze skill werkt, en gaat voor op de standaard in deze skill. Zegt de gebruiker dat deze skill voortaan iets anders moet doen, stel dan één regel voor onder dat kopje, schrijf hem na akkoord weg (maak het bestand met de kop `# Werkwijze`, of het kopje, aan als het er nog niet is) en werk vanaf dat moment zo. Pas de skill zelf nooit aan: een update van de plugin overschrijft hem.
+
 ## Procedure
 
 1. **Route bepalen en input ophalen.** Drie ingangen:

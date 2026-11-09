@@ -10,7 +10,7 @@ Verzamelskill. Haalt content-inspiratie binnen en schrijft die naar een staging-
 
 ## Inputs
 
-Lees uit `Resources/Input/` van de werkmap van je Content Manager (de les "Je werkmap klaarzetten"). Herken de bestanden aan hun naam, ook als het nummer ervoor afwijkt:
+Lees uit `Resources/Input/` van de werkmap van je Content Manager (de les "Je content map inrichten"). Herken de bestanden aan hun naam, ook als het nummer ervoor afwijkt:
 
 - `11 - Inspire zoektermen.md` — Instagram-hashtags en YouTube-zoektermen. Ontbreekt het bestand of is het leeg: meld dat er geen zoektermen zijn en vraag de gebruiker ze aan te leveren. Verzin zelf geen zoektermen.
 - `09 - Inspirerende creators.md` — creators in de vorm `- [Naam] - [platform]: [URL]`.
@@ -43,6 +43,10 @@ Format van het staging-bestand:
 ## Kostenbewaking
 
 Elke Apify-actor rekent per opgehaald resultaat, sommige ook per start. Controleer daarom vóór elke actor-call dat het limietveld de naam heeft die hieronder staat en gevuld is; een verkeerde of lege limiet betekent bij de meeste actors "onbeperkt" en scrapet dan de volledige geschiedenis. Haal niet meer posts op dan de skill voorschrijft.
+
+## Jouw werkwijze
+
+Lees vóór je begint `Resources/Fundament/werkwijze.md` in de werkmap van je Content Manager, als dat bestand er is, en daarin het kopje `## @inspire`. Wat daar staat is hoe de gebruiker wil dat deze skill werkt, en gaat voor op de standaard in deze skill. Zegt de gebruiker dat deze skill voortaan iets anders moet doen, stel dan één regel voor onder dat kopje, schrijf hem na akkoord weg (maak het bestand met de kop `# Werkwijze`, of het kopje, aan als het er nog niet is) en werk vanaf dat moment zo. Pas de skill zelf nooit aan: een update van de plugin overschrijft hem.
 
 ## Procedure
 

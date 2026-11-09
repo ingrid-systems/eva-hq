@@ -39,6 +39,10 @@ Deze skill heeft geen eigen engine. Ze leest de engine-bestanden uit de map `con
 - Per uitgewerkt fragment één before/after-bestand: `Output/Content/JJJJ-MM-DD-[korte-slug].md`, in hetzelfde format als de Content Creator, aangevuld met anker-metadata (zie stap 8).
 - Eén anker-overzicht: `Output/Content/JJJJ-MM-DD-anker-[slug].md`, met de bron, alle gevonden fragmenten en welke daarvan zijn uitgewerkt. Zo blijft traceerbaar wat er nog in het anker zit voor later.
 
+## Jouw werkwijze
+
+Lees vóór je begint `Resources/Fundament/werkwijze.md` in de werkmap van je Content Manager, als dat bestand er is, en daarin het kopje `## @repurpose`. Wat daar staat is hoe de gebruiker wil dat deze skill werkt, en gaat voor op de standaard in deze skill. Zegt de gebruiker dat deze skill voortaan iets anders moet doen, stel dan één regel voor onder dat kopje, schrijf hem na akkoord weg (maak het bestand met de kop `# Werkwijze`, of het kopje, aan als het er nog niet is) en werk vanaf dat moment zo. Pas de skill zelf nooit aan: een update van de plugin overschrijft hem.
+
 ## Procedure
 
 ### Fase 1: extraheren en selecteren

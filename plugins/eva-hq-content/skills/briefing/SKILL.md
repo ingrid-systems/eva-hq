@@ -10,7 +10,7 @@ Verzamelskill. Zoekt recent vaknieuws op basis van keywords over meerdere platfo
 
 ## Inputs
 
-Lees uit `Resources/Input/` van de werkmap van je Content Manager (de les "Je werkmap klaarzetten"). Herken het bestand aan zijn naam, ook als het nummer ervoor afwijkt:
+Lees uit `Resources/Input/` van de werkmap van je Content Manager (de les "Je content map inrichten"). Herken het bestand aan zijn naam, ook als het nummer ervoor afwijkt:
 
 - `10 - Briefing keywords.md` — vakinhoudelijke keywords (komma-gescheiden of bullets). Ontbreekt het bestand of is het leeg: meld dat er geen keywords zijn en vraag de gebruiker ze aan te leveren. Verzin zelf geen keywords.
 
@@ -46,6 +46,10 @@ Bronnen: [...]
 ## Items
 [per item: titel | bron/auteur | datum | 2 tot 3 zinnen | actie-inzicht | link]
 ```
+
+## Jouw werkwijze
+
+Lees vóór je begint `Resources/Fundament/werkwijze.md` in de werkmap van je Content Manager, als dat bestand er is, en daarin het kopje `## @briefing`. Wat daar staat is hoe de gebruiker wil dat deze skill werkt, en gaat voor op de standaard in deze skill. Zegt de gebruiker dat deze skill voortaan iets anders moet doen, stel dan één regel voor onder dat kopje, schrijf hem na akkoord weg (maak het bestand met de kop `# Werkwijze`, of het kopje, aan als het er nog niet is) en werk vanaf dat moment zo. Pas de skill zelf nooit aan: een update van de plugin overschrijft hem.
 
 ## Procedure
 

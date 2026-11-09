@@ -13,7 +13,7 @@ Het contentsysteem van EVA HQ (Content Creation). Zes skills die samen het hele 
 
 ## Wat je nodig hebt
 
-- De werkmap van je Content Manager (`Operations/Content`) met het fundament in `Resources/Fundament/` uit de lessen van Content Creation (`identiteit.md`, `strategie.md`) en voor de planner `planner.md` uit de Content Planner-lessen.
+- De werkmap van je Content Manager (`Operations/Content`) met het fundament in `Resources/Fundament/` uit de lessen van Content Creation (`identiteit.md`, `strategie.md`) en voor de planner `planner.md` uit de Content Planner-lessen. Wil de gebruiker dat een skill anders werkt dan de standaard, dan staat dat in `Resources/Fundament/werkwijze.md`, onder het kopje van die skill; de skills lezen dat bestand zelf en passen het aan na akkoord. Voor @planner staan de instellingen in `planner.md`.
 - De save-skill, geïnstalleerd als losse skill (de les "Skill inrichten: Save All (@save)"). Die bevat de link van je Business HQ-pagina; alle skills in deze plugin vinden je Notion-databases via die ene link.
 - De koppelingen die de lessen noemen: Notion; Apify voor briefing en inspire; Composio (Instagram) als je die route gebruikt.
 
