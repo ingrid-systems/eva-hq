@@ -101,7 +101,7 @@ Lees `references/review.md`. In het kort: haal alle slots van de maand op, zet g
 ## Foutafhandeling
 
 - `planner.md` ontbreekt: stop, verwijs naar de planner-intake (de les 'Je planner-profiel'). Zonder profiel kun je geen ritme of verdeling afleiden en ga je die niet gokken.
-- Save-skill niet geïnstalleerd, geen link op de regel `Systeempagina:`, of geen database "Content" op die pagina: waarschijnlijk is Module 1 nog niet ingericht. Zeg wat er ontbreekt, verwijs naar de lessen 'Notion-templates installeren en personaliseren' en 'Skill inrichten: Save All (@save)' van Module 1 en stop; zonder database is er geen plek voor het maandplan.
+- Save-skill niet geïnstalleerd, geen link op de regel `Systeempagina:`, of geen database "Content" op die pagina: waarschijnlijk is de basis uit Inspiration & Ideas nog niet ingericht. Zeg wat er ontbreekt, verwijs naar de lessen 'Notion-templates installeren en personaliseren' en 'Skill inrichten: Save All (@save)' van Inspiration & Ideas en stop; zonder database is er geen plek voor het maandplan.
 - Schema-update of aanmaken van de weergave faalt: meld het en geef de vier eigenschappen en de weergave-instelling zodat de klant ze zelf in Notion kan aanmaken; ga daarna gewoon door met het skelet.
 - Voorraadbestand ontbreekt of is ouder dan twee maanden: plan de hergebruik-slots wel, maar zeg bij de weekvulling dat de opties uit een verouderde of ontbrekende voorraad komen en verwijs naar de les 'Je bestaande voorraad'.
 - Geen Bronarchief (sectie 4 op nee) terwijl de bronverdeling oogst bevat: meld de tegenstrijdigheid en stel voor de oogst-slots deze maand als hergebruik of eigen te plannen, of het profiel bij te werken.

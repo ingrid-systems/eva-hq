@@ -27,7 +27,7 @@ Convergentieskill. Leest de onverwerkte staging-bestanden van `briefing` en `ins
    - hook/angle
    - `copy nog ophalen: ja/nee` (ja bij een creator-reel of -carrousel waarvan de volledige copy nog in de video of slides zit)
 4. Wacht op de selectie van de gebruiker. Sla niets op zonder expliciete selectie. Vraagt de gebruiker om de rest, toon dan de volgende 3 tot 5 op dezelfde manier.
-5. Intentie bepalen. Stel per geselecteerd idee een intentie van één regel voor: wat de post moet bereiken, afgeleid uit de pillar, het CTA-niveau en de angle (bijvoorbeeld awareness opbouwen, een comment-trigger naar een weggever, of een CTA naar een aanbod). Leg de voorgestelde intenties in één keer voor en vraag of ze kloppen of aangepast moeten worden. Pas aan op basis van de reactie. Schrijf niets weg vóór deze bevestiging.
+5. Intentie bepalen. Stel per geselecteerd idee een intentie van één regel voor: wat de post moet bereiken, afgeleid uit de pillar en de angle (bijvoorbeeld awareness opbouwen, een comment-trigger naar een weggever, of een CTA naar een aanbod). Leg de voorgestelde intenties in één keer voor en vraag of ze kloppen of aangepast moeten worden. Pas aan op basis van de reactie. Schrijf niets weg vóór deze bevestiging.
 6. Diepe fase, alleen op geselecteerde items met `copy nog ophalen: ja`:
    - Instagram reel: `apify/instagram-reel-scraper` met `{ "username": ["<schone reel-URL>"], "resultsLimit": 1, "includeTranscript": true }`. Strip query-params als `?igsh=` uit de URL.
    - Instagram carrousel: `zen-studio/google-lens-ocr` per slide (`childPosts[n].displayUrl`), met `outputDetail: "text_only"`.
