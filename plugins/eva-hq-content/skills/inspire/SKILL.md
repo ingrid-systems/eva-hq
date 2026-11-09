@@ -1,7 +1,7 @@
 ---
 name: inspire
 description: Content creatie-inspiratie op basis van zoektermen en optioneel eigen creators. Zoektermen-scan op Instagram (hashtags) en YouTube (keywords) naar trending formats en hooks, plus een optionele scan van vooraf vastgelegde creators. Verzamelt en schrijft naar een staging-bestand dat daarna met @ideate verwerkt wordt. TRIGGERS op @inspire, "content inspiratie", "inspiratie zoeken", "wat werkt op Instagram", "trending content", "content ideeën", "wat posten anderen", "content research", "hashtag research", "scan mijn creators", "creators bekijken", of elke vraag over het verzamelen van content-inspiratie.
-version: "1.1"
+version: "1.2"
 ---
 
 # inspire
@@ -77,10 +77,10 @@ Voorwaarde: draai dit deel alleen als `Resources/Input/09 - Inspirerende creator
 
 Scrape incrementeel: per creator alleen posts die nieuwer zijn dan de vorige run, zodat geen post twee keer wordt gereviewd. Houd de voortgang bij in `Output/Inspiratie-staging/_creator-state.json`, met per creator-URL het veld `laatste_post_timestamp` (ISO-timestamp van de nieuwste post die de vorige run is opgehaald). Maak het bestand aan als het niet bestaat.
 
-Voer het zware werk uit in subagents zodat de hoofdcontext schoon blijft. Per creator uit bestand 09, op basis van het platform in de regel. Eerste run voor een creator (geen entry in `_creator-state.json`): nieuwste 15 tot 25 posts als basislijn. Vervolgrun: alleen posts nieuwer dan `laatste_post_timestamp`, dedupe op shortCode/URL, begrens op 50 nieuwe posts en meld als die grens is geraakt.
+Voer het zware werk uit in subagents zodat de hoofdcontext schoon blijft. Per creator uit bestand 09, op basis van het platform in de regel. Eerste run voor een creator (geen entry in `_creator-state.json`): nieuwste 15 tot 25 posts als basislijn. Vervolgrun: alleen posts nieuwer dan `laatste_post_timestamp`, dedupe op shortCode/URL, begrens op 25 nieuwe posts. Is die grens geraakt, meld dan bij die creator dat er mogelijk meer nieuwe posts waren en dat de oudste daarvan niet zijn meegenomen.
 
 1. Scrape, per platform met de bijbehorende actor. Vul altijd het limietveld met de naam die hier staat, anders scrapet de actor onbeperkt:
-   - **Instagram** — `apify/instagram-scraper`: `{ "directUrls": ["<profiel-URL>"], "resultsType": "posts", "resultsLimit": 25 }`. Filter op `timestamp` nieuwer dan `laatste_post_timestamp`. Haal daarna per reel de on-screen hook op via OCR: `zen-studio/google-lens-ocr` met `{ "imageUrl": "<displayUrl>", "language": "<taal van de creator, bv. en of nl>", "outputDetail": "text_only" }`, in batches van maximaal 10, binnen de subagent.
+   - **Instagram** — `apify/instagram-scraper`: `{ "directUrls": ["<profiel-URL>"], "resultsType": "posts", "resultsLimit": 25 }`. Voeg bij een vervolgrun `"onlyPostsNewerThan": "<laatste_post_timestamp>"` toe, zodat de actor alleen nieuwere posts ophaalt. Filter daarna alsnog op `timestamp` nieuwer dan `laatste_post_timestamp`; vastgepinde posts kunnen ondanks het filter meekomen. Haal daarna per reel de on-screen hook op via OCR: `zen-studio/google-lens-ocr` met `{ "imageUrl": "<displayUrl>", "language": "<taal van de creator, bv. en of nl>", "outputDetail": "text_only" }`, in batches van maximaal 10, binnen de subagent.
    - **LinkedIn** — `supreme_coder/linkedin-post`: `{ "urls": ["<profiel- of bedrijfs-URL>"], "limitPerSource": 25 }`. Het limietveld heet `limitPerSource`, niet `maxPosts`; met een verkeerde naam of leeg veld haalt de actor de volledige profielgeschiedenis op (kan honderden posts zijn). Bij een vervolgrun: voeg `"scrapeUntil": "<laatste_post_timestamp>"` toe, zodat de actor alleen nieuwere posts ophaalt in plaats van alles op te halen en achteraf te filteren. Filter daarna alsnog op `postedAtISO` nieuwer dan `laatste_post_timestamp`. De volledige `text` is de hook, geen OCR.
    - **YouTube** — `streamers/youtube-scraper`: `{ "startUrls": [{ "url": "<kanaal-URL>" }], "sortVideosBy": "NEWEST", "maxResults": 25, "downloadSubtitles": false }`. Voeg bij een vervolgrun `"oldestPostDate": "<laatste_post_timestamp>"` toe om alleen nieuwere video's te halen. `title` en de omschrijving (`text`) zijn de hook, geen OCR. Transcript komt pas in @ideate op de keepers.
 2. Retry: posts die niet binnenkomen opnieuw ophalen, maximaal twee pogingen per post. Log in het staging-bestand wat na twee pogingen ontbreekt.
@@ -98,5 +98,5 @@ Toon in de chat: aantal items uit deel A, aantal per creator uit deel B, en even
 - Bestand 11 ontbreekt of is leeg: meld het en vraag om zoektermen. Draai niet door op verzonnen termen.
 - Bestand 09 ontbreekt of bevat geen creators: sla deel B over en meld in één regel dat er nog geen creators zijn ingevuld.
 - Een actor faalt: ga door met de overige bronnen, log de gemiste bron in het staging-bestand.
-- Begrens deel B op 15 tot 25 posts per creator bij de eerste run, en op 50 nieuwe posts per creator bij vervolgruns.
+- Begrens deel B op 15 tot 25 posts per creator bij de eerste run, en op 25 nieuwe posts per creator bij vervolgruns.
 - Mist een post een bruikbare `timestamp`, dedupliceer dan op shortCode/URL zodat hij niet alsnog dubbel wordt opgehaald.
