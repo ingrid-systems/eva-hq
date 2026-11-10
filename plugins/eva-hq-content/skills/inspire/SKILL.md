@@ -8,6 +8,8 @@ version: "1.2"
 
 Verzamelskill. Haalt content-inspiratie binnen en schrijft die naar een staging-bestand. Slaat zelf niets op in de inspiratiedatabase; dat doet de `ideate`-skill. Bestaat uit deel A (zoektermen-scan, draait altijd) en deel B (creator-scan, conditioneel).
 
+De werkmap van je Content Manager is `Operations/Content/` in je hoofdmap; paden die met `Resources/` of `Output/` beginnen liggen daarin, ook als je deze skill vanuit een ander project draait.
+
 ## Inputs
 
 Lees uit `Resources/Input/` van de werkmap van je Content Manager (de les "Je content map inrichten"). Herken de bestanden aan hun naam, ook als het nummer ervoor afwijkt:
@@ -24,7 +26,7 @@ Chat-overrides hebben voorrang op de bestanden:
 
 Schrijf alle vondsten naar:
 ```
-Output/Inspiratie-staging/inspire-JJJJ-MM-DD.md
+Operations/Content/Output/Inspiratie-staging/inspire-JJJJ-MM-DD.md
 ```
 Maak de map `Output/Inspiratie-staging/` aan als die niet bestaat. Bestaat het dagbestand al, append in plaats van overschrijven. Toon in de chat alleen een korte samenvatting en de regel: "Draai @ideate om dit te verwerken."
 

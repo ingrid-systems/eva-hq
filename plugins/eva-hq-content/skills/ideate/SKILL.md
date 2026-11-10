@@ -8,9 +8,11 @@ version: "1.2"
 
 Convergentieskill. Leest de onverwerkte staging-bestanden van `briefing` en `inspire`, synthetiseert content-ideeën, rangschikt ze intern op sterkte, presenteert een aanbevolen voorselectie, laat de gebruiker kiezen, stelt per gekozen idee een intentie voor, verrijkt gekozen creator-items met de volledige copy en schrijft alleen de selectie naar de inspiratiedatabase. Markeert verwerkte staging-bestanden.
 
+De werkmap van je Content Manager is `Operations/Content/` in je hoofdmap; paden die met `Resources/` of `Output/` beginnen liggen daarin, ook als je deze skill vanuit een ander project draait.
+
 ## Inputs
 
-1. Staging: alle bestanden in `Output/Inspiratie-staging/` die NIET op `-verwerkt.md` eindigen (`briefing-*.md` en `inspire-*.md`). Sla `*-verwerkt.md` over. Is er geen onverwerkt bestand: meld dit en stel voor eerst `briefing` of `inspire` te draaien. Stop daarna.
+1. Staging: alle bestanden in `Operations/Content/Output/Inspiratie-staging/` die NIET op `-verwerkt.md` eindigen (`briefing-*.md` en `inspire-*.md`). Sla `*-verwerkt.md` over. Is er geen onverwerkt bestand: meld dit en stel voor eerst `briefing` of `inspire` te draaien. Stop daarna.
 2. Context (lezen, niet wijzigen), om ideeën af te stemmen:
    - het topic-pillars document in `Resources/Input/`
    - het villain/anti-visie document in `Resources/Input/`
@@ -23,10 +25,10 @@ Lees vóór je begint `Resources/Fundament/werkwijze.md` in de werkmap van je Co
 ## Procedure
 
 1. Lees alle onverwerkte staging-bestanden. Registreer per item de bron (creator + post, of briefing-topic) en de link voor provenance.
-2. Synthetiseer content-ideeën door de staging-input te kruisen met de topic-pillars, de villain en de Brand Voice. Combineer, herhaal niet: bijvoorbeeld een trending creator-hook toegepast op een briefing-topic onder de passende pillar. Rangschik daarna alle gesynthetiseerde ideeën intern op sterkte. Wegingsvolgorde: fit met een pillar en met de villain/anti-visie, kracht en specificiteit van de hook (micro-specifiek boven algemeen), en spreiding over de pillars zodat de top niet uit één rol bestaat. Dit rangschikken doe je stil; de gebruiker ziet alleen de uitkomst.
+2. Synthetiseer content-ideeën door de staging-input te kruisen met de topic-pillars, de villain en de Brand Voice. Combineer, herhaal niet: bijvoorbeeld een trending creator-hook toegepast op een briefing-topic onder de passende pillar. Rangschik daarna alle gesynthetiseerde ideeën intern op sterkte. Wegingsvolgorde: fit met een pillar en met de villain/anti-visie, kracht en specificiteit van de hook (micro-specifiek boven algemeen), en spreiding over de pillars zodat de top niet uit één rol bestaat. Twee velden, niet door elkaar halen: het topic is het onderwerp uit het topic-pillars document, de pillar is de rol (Authority, Connection, Vision, Embodiment of Launch). Dit rangschikken doe je stil; de gebruiker ziet alleen de uitkomst.
 3. Presenteer een voorselectie, geen platte lijst. Toon de sterkste 3 tot 5 ideeën op volgorde, met het bovenste idee expliciet als aanrader ("deze raad ik aan, want ..."). Presenteer er nooit meer dan 5 in één keer, ook niet bij een grote staging-batch; de rest houd je achter de hand. Sluit af met de vraag of de gebruiker de overige ideeën ook wil zien (en hoeveel dat er zijn). Per gepresenteerd idee:
    - idee (1 regel)
-   - pillar
+   - topic en pillar
    - bron + link
    - hook/angle
    - `copy nog ophalen: ja/nee` (ja bij een creator-reel of -carrousel waarvan de volledige copy nog in de video of slides zit)
@@ -38,7 +40,7 @@ Lees vóór je begint `Resources/Fundament/werkwijze.md` in de werkmap van je Co
    - LinkedIn: de volledige posttekst zit al in de staging, geen extra call.
    - YouTube: gebruik standaard de omschrijving. Wil de gebruiker de volledige uitwerking, haal dan het transcript via `streamers/youtube-scraper` met `{ "startUrls": [{ "url": "<video-URL>" }], "maxResults": 1, "downloadSubtitles": true, "subtitlesFormat": "plaintext" }`.
    Meld vooraf het aantal items en de geschatte kosten (transcripts rekenen per minuut) en wacht op akkoord. Voer de diepe fase uit in een subagent.
-7. Schrijf elk geselecteerd item naar de inspiratiedatabase via de `save`-skill (route: Inspiratie). Geef daarbij de Bestemming expliciet mee: de eerste waarde op de regel `Content-bestemmingen:` in `Resources/Fundament/strategie.md` van de werkmap van je Content Manager. Ontbreekt dat bestand of die regel, laat de save-skill dan zelf kiezen en zeg één keer dat de regel ontbreekt. Vul het Notities-veld in het vaste format: de kern van het idee op de eerste regel, dan een lege regel, dan `INTENTIE: <de bevestigde intentie uit stap 5>`. Voeg daaronder de ideate-metadata toe: pillar, hook/angle, format, bron + link, en de opgehaalde copy indien de diepe fase is gedraaid.
+7. Schrijf elk geselecteerd item naar de inspiratiedatabase via de `save`-skill (route: Inspiratie). Geef daarbij de Bestemming expliciet mee: de eerste waarde op de regel `Content-bestemmingen:` in `Resources/Fundament/strategie.md` van de werkmap van je Content Manager. Ontbreekt dat bestand of die regel, laat de save-skill dan zelf kiezen en zeg één keer dat de regel ontbreekt. Vul het Notities-veld in het vaste format: de kern van het idee op de eerste regel, dan een lege regel, dan `INTENTIE: <de bevestigde intentie uit stap 5>`. Voeg daaronder de ideate-metadata toe: topic, pillar, hook/angle, format, bron + link, en de opgehaalde copy indien de diepe fase is gedraaid.
 8. Markeren als verwerkt: hernoem een staging-bestand naar `...-verwerkt.md` (bijvoorbeeld `inspire-2026-06-28.md` → `inspire-2026-06-28-verwerkt.md`) pas NADAT de gebruiker bevestigt dat het bestand volledig is doorgenomen. Een bestand is pas volledig doorgenomen als ook de achtergehouden ideeën zijn getoond en afgehandeld. Bij een gedeeltelijk doorgenomen bestand: laat het ongewijzigd staan. Bij twijfel: vraag het.
 9. Vat af: aantal gepresenteerde ideeën, hoeveel er nog achter de hand zijn, aantal opgeslagen, welke bestanden als verwerkt gemarkeerd, en wat nog onverwerkt openstaat.
 

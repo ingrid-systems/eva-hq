@@ -13,7 +13,7 @@ De mechanisme-namen (Reframe, Cost Reveal, Contrarian, Warning, Curiosity Gap) z
 Een hook bestaat uit drie keuzes op drie assen:
 
 - **Mechanisme**: wat de hook laat pakken. Vijf stuks. Hier kies je uit.
-- **Bron**: over wie het gaat. Over de klant (Authority) of over de gebruiker zelf (Living Proof). De bron bepaalt de pijler; het is geen apart mechanisme.
+- **Bron**: over wie het gaat. Over de klant (Authority) of over de gebruiker zelf (Embodiment, of Vision als het om een standpunt gaat). De bron bepaalt de pijler; het is geen apart mechanisme.
 - **Verpakking**: hoe je hem aflevert. De directe aanroep, optioneel over elk mechanisme heen.
 
 Een post is altijd een mechanisme, toegepast op een bron, eventueel in een verpakking.
@@ -26,7 +26,7 @@ De voorbeelden tonen de vorm. Vul ze per post in tot laag 3-4 (`micro-specificit
 
 ### 1. Reframe
 **Wat:** "Het is niet wat de lezer denkt." Een diagnose die het probleem herdefinieert, of twee dingen tegen elkaar die niet lijken samen te gaan.
-**Pijler-default:** Authority. Pure observatie zonder klant-koppeling kan Living Proof zijn.
+**Pijler-default:** Authority. Pure observatie zonder klant-koppeling kan Vision zijn.
 **Voorbeelden:**
 - Mijn klant dacht dat haar probleem [X] was, maar het was altijd al DIT
 - Mijn klant bleef haar salespagina herschrijven. Het probleem zat niet op die pagina.
@@ -40,7 +40,7 @@ De voorbeelden tonen de vorm. Vul ze per post in tot laag 3-4 (`micro-specificit
 
 ### 2. Cost Reveal
 **Wat:** specifiek gedrag van de lezer benoemen, met het gevolg dat eraan vastzit. Wordt Kosten zodra dat gevolg een getal is.
-**Pijler-default:** Authority. In persoonlijke vorm ("dit heeft mij X gekost") is het Living Proof met bron eigen verhaal, niet dit mechanisme.
+**Pijler-default:** Authority. In persoonlijke vorm ("dit heeft mij X gekost") is het Embodiment met bron eigen verhaal, of Connection als het een eerlijke fout zonder les is; niet dit mechanisme.
 **Voorbeelden:**
 - Niemand vertelt je dit, maar je bent zelf je grootste saboteur
 - Je verandert je prijzen voor de vijfde keer deze maand omdat het voelt alsof je te veel vraagt
@@ -52,7 +52,7 @@ De voorbeelden tonen de vorm. Vul ze per post in tot laag 3-4 (`micro-specificit
 
 ### 3. Contrarian
 **Wat:** stelling nemen tegen mainstream advies of een gangbare overtuiging.
-**Pijler-default:** kan beide. Mét klant-koppeling ("en dat is waarom je vastzit op Y") = Authority. Zónder koppeling, puur positie = Living Proof.
+**Pijler-default:** kan beide. Mét klant-koppeling ("en dat is waarom je vastzit op Y") = Authority. Zónder koppeling, puur positie = Vision.
 **Voorbeelden:**
 - Iedereen zegt verhoog je prijzen, maar dat is waarom je je nog steeds goedkoop voelt
 - Iedereen zegt post meer content, maar dat is waarom je opbrandt zonder klanten
@@ -64,7 +64,7 @@ De voorbeelden tonen de vorm. Vul ze per post in tot laag 3-4 (`micro-specificit
 
 ### 4. Warning
 **Wat:** waarschuwen voor een fout of valkuil. "Stop met X als je Y wil." "De grootste fout in [onderwerp]."
-**Pijler-default:** kan beide. Klant-fout met resultaat-koppeling = Authority. Pure rant over wat mensen verkeerd doen = Living Proof.
+**Pijler-default:** kan beide. Klant-fout met resultaat-koppeling = Authority. Pure rant over wat mensen verkeerd doen = Vision.
 **Voorbeelden:**
 - De nr. 1 fout die mensen maken als ze [actie]
 - Stop met focussen op [X] als je [Y] wil
@@ -75,7 +75,7 @@ De voorbeelden tonen de vorm. Vul ze per post in tot laag 3-4 (`micro-specificit
 
 ### 5. Curiosity Gap
 **Wat:** een onverwachte verhouding tussen actie en resultaat. "Klein ding, groot resultaat" of "onmogelijke transformatie."
-**Pijler-default:** kan beide. Gericht op klant-resultaat = Authority. Eigen verhaal = Living Proof.
+**Pijler-default:** kan beide. Gericht op klant-resultaat = Authority. Eigen verhaal = Embodiment.
 **Voorbeelden:**
 - Hoe één zin mijn prijzen verdubbelde
 - Hoe 15 minuten per dag zorgde voor 70% winstmarge
@@ -91,10 +91,12 @@ De voorbeelden tonen de vorm. Vul ze per post in tot laag 3-4 (`micro-specificit
 De bron bepaalt de pijler en levert het ruwe materiaal. Combineert met elk mechanisme.
 
 - **Authority, bron = de klant.** Een klantmoment, advies dat de gebruiker net gaf, transformatie die ze net zag.
-- **Living Proof, bron = de gebruiker zelf.** Drie vertelhoeken:
+- **Embodiment, bron = de gebruiker zelf.** Drie vertelhoeken:
   - Eigen mijlpaal of fout: "Ik bereikte X", "Ik heb jaren verspild aan Y"
   - Real-time reactie: "Ik zag net een video die indruist tegen alles wat ik geloof"
   - Terugblik: "Ik wou dat ik dit drie jaar geleden wist"
+
+  Gaat het eigen verhaal over wat de gebruiker gelooft (zoals de real-time reactie), dan is de pijler Vision; is het een eerlijke fout zonder les, dan Connection.
 
 Pas een mechanisme toe op de bron, bijvoorbeeld een eigen mijlpaal verteld als Reframe, of een klantmoment als Cost Reveal.
 
@@ -135,7 +137,7 @@ Te vaag om als kern te dragen: vrijheid, rijker leven, groei, simpelere business
 
 ## Werkwijze
 
-1. Lees het idee: pillar plus ruwe angle uit ideate.
+1. Lees het idee: topic, pillar en ruwe angle uit ideate.
 2. Filter welke van de vijf mechanismen passen bij dit idee en deze pijler. Een mechanisme valt af als het ruwe materiaal ontbreekt: geen onverwachte ratio betekent geen Curiosity Gap, geen concreet gedrag of getal betekent geen Cost Reveal.
 3. Stel de 2 à 3 sterkste voor met een korte schets. Respecteer de grondtoon uit `identiteit.md`.
 4. Leg het gekozen mechanisme vast in de post-metadata (`hook:`) voor de maandelijkse analyse.

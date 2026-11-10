@@ -25,13 +25,13 @@ Onder alles ligt de spine: Hook, Juice (waarom wat ze doen niet werkt), Sauce (w
 
 **Basis (default).** Beats: Mirror (uitdaging en kwetsbaarheid), Aha Moment (de shift), Method (autoriteits-anker), Bridge Back to Them, CTA.
 When to use: losse story-posts, daily content met persoonlijk of klant-anker, korte transformatie. Default als geen flavor beter past.
-Natural home: Authority of Living Proof, neutraal.
+Natural home: Authority of Embodiment, neutraal.
 
 Drie opt-in flavors, één keuze per post, niet stapelbaar:
 
-- **Living Proof Story** (6 beats): nu-scène (open op de "after"), het oude beeld, het kantelpunt, wat je anders ging doen (aanpak benoemd, niet uitgelegd), wat dit voor de lezer opent (micro-specifieke imagine), aanbod-brug plus CTA. When to use: signature- en pinned posts, lanceer-content waar jij het geleefde bewijs bent. Natural home: Living Proof met Authority-bridge.
+- **Embodiment Story** (6 beats): nu-scène (open op de "after"), het oude beeld, het kantelpunt, wat je anders ging doen (aanpak benoemd, niet uitgelegd), wat dit voor de lezer opent (micro-specifieke imagine), aanbod-brug plus CTA. When to use: signature- en pinned posts, lanceer-content waar jij het geleefde bewijs bent. Natural home: Embodiment met Authority-bridge.
 - **Authority Case** (klant als bewijs): zelfde spine, maar de klant is het bewijs in plaats van jij. When to use: klant-resultaat-posts waar de transformatie van een klant de post draagt. Natural home: Authority.
-- **Mistakes Listicle** (beats): credibility-hook, emotional build-up, X mistakes elk via Mistake-Cost-Fix, tie-in, final slide met micro-specifieke verlangens, CTA. When to use: problem-aware content via een mistakes-listicle. Natural home: Authority met villain-overlay, of Living Proof als de fouten uit eigen ervaring komen.
+- **Mistakes Listicle** (beats): credibility-hook, emotional build-up, X mistakes elk via Mistake-Cost-Fix, tie-in, final slide met micro-specifieke verlangens, CTA. When to use: problem-aware content via een mistakes-listicle. Natural home: Authority met villain-overlay, of Embodiment als de fouten uit eigen ervaring komen.
 
 ### 2. Statement-based Authority
 Drie patronen, één punch, geen narratief:

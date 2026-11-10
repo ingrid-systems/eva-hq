@@ -6,7 +6,7 @@ In dit document: "de gebruiker" bedient de creator. "De lezer" of "de klant" is 
 
 ## Welke frameworks krijgen een carousel
 
-- Storytelling Spine (inclusief de flavors Living Proof Story, Authority Case en Mistakes Listicle)
+- Storytelling Spine (inclusief de flavors Embodiment Story, Authority Case en Mistakes Listicle)
 - Authority Flow
 - PAS
 
@@ -39,7 +39,7 @@ Verdeling, kort (10 slides): Haak 1, Hoe het was 2, Keerpunt 1, Wat ik veranderd
 Verdeling, lang (13 slides): Haak 1, Hoe het was 3, Keerpunt 2, Wat ik veranderde 3, Hoe het nu is 1, Wat dit voor jou opent 2, Uitnodiging 1.
 
 Pacing per flavor:
-- **Living Proof Story:** open de carousel op het nu-beeld (de "after"), niet op het probleem. De lezer ziet eerst het nieuwe leven, dan het oude, dan de omslag. Sterker voor lanceer- en pinned posts.
+- **Embodiment Story:** open de carousel op het nu-beeld (de "after"), niet op het probleem. De lezer ziet eerst het nieuwe leven, dan het oude, dan de omslag. Sterker voor lanceer- en pinned posts.
 - **Authority Case:** zelfde beats, maar de hoofdpersoon is de klant (derde persoon). Beat 5 wordt "hoe haar leven er nu uitziet".
 - **Mistakes Listicle:** wijkt af van de 7-beat verhaalboog. Mapping: hook (1), emotional build-up (1), per mistake één slide via Mistake-Cost-Fix, tie-in (1), final slide met micro-specifieke verlangens (1), CTA (1).
 

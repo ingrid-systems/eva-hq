@@ -8,6 +8,8 @@ version: "1.1"
 
 Verzamelskill. Zoekt recent vaknieuws op basis van keywords over meerdere platforms, filtert op relevantie en schrijft naar een staging-bestand. Slaat zelf niets op in de inspiratiedatabase; dat doet de `ideate`-skill.
 
+De werkmap van je Content Manager is `Operations/Content/` in je hoofdmap; paden die met `Resources/` of `Output/` beginnen liggen daarin, ook als je deze skill vanuit een ander project draait.
+
 ## Inputs
 
 Lees uit `Resources/Input/` van de werkmap van je Content Manager (de les "Je content map inrichten"). Herken het bestand aan zijn naam, ook als het nummer ervoor afwijkt:
@@ -30,7 +32,7 @@ Filter op relevantie voor het vakgebied en de doelgroep van de gebruiker, af te 
 
 Schrijf de briefing naar:
 ```
-Output/Inspiratie-staging/briefing-JJJJ-MM-DD.md
+Operations/Content/Output/Inspiratie-staging/briefing-JJJJ-MM-DD.md
 ```
 Maak de map `Output/Inspiratie-staging/` aan als die niet bestaat. Bestaat het dagbestand al, append in plaats van overschrijven. Toon de briefing daarnaast in de chat en sluit af met "Draai @ideate om dit te verwerken."
 

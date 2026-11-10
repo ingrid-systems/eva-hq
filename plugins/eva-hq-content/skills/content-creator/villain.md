@@ -11,7 +11,7 @@ In dit document: "de gebruiker" bedient de creator. "De lezer" of "de klant" is 
 Uit `identiteit.md` (en waar nodig `05 - Villain.md`):
 
 - **De hoofd-villain:** een systeem, overtuiging of aanpak in haar eigen woorden, plus de schade die hij doet.
-- **De pillar-uitkomst:** in de voorbereiding is per topic-pillar bepaald of er een eigen micro-villain is, of de pillar onder de hoofd-villain valt, of dat er geen villain is. Pak de villain die hoort bij de pillar van deze post. Staat die pillar op "geen villain", dan blijft de overlay achterwege.
+- **De topic-uitkomst:** in `05 - Villain.md` (onder Micro-villains; identiteit.md heeft alleen de hoofd-villain) staat per topic-pillar of er een eigen micro-villain is, of het topic onder de hoofd-villain valt, of dat er geen villain is. Pak de villain die hoort bij het topic van deze post, niet bij de pillar (de rol). Staat dat topic op "geen villain", dan blijft de overlay achterwege.
 - **De anti-visie:** al in brand voice geschreven, waar de gebruiker voor staat tegenover de villain.
 - **De grondtoon-defaults:** hoe centraal de villain staat en hoe confronterend de toon is. Volg die.
 
@@ -24,7 +24,7 @@ Harde regels:
 - Altijd een systeem, overtuiging of aanpak. Nooit een persoon, merk of concurrent.
 - De doelgroep blijft slim, niet naïef. Ze is misleid, niet dom.
 - Het klinkt als analyse, niet als aanval. Geen klaagverhaal.
-- Niet elke post draait om de villain. Geen plek of geen villain bij deze pillar, dan blijft de overlay achterwege.
+- Niet elke post draait om de villain. Geen plek of geen villain bij dit topic, dan blijft de overlay achterwege.
 - De interne benamingen van het villain-type noem je niet tegen de gebruiker. Breng de villain in gewone taal.
 
 ## Waar de villain in een post werkt
