@@ -33,7 +33,7 @@ Deze skill heeft geen eigen engine. Ze leest de engine-bestanden uit de map `con
    - de engine uit de content-creator skillmap (zie Vereisten)
    - de eigen contentvoorbeelden per platform in `Resources/Input/06 - Contentvoorbeelden/[platform]/`. Staat daar een `_index.md` met alleen URL's (Instagram, LinkedIn), zoek die URL's dan op in `Resources/Input/12 - Bestaande voorraad.md` (herken het bestand aan de naam, ook bij een ander nummer) en lees daar de volledige tekst, slidetekst en transcript van die posts; bestanden met tekst (E-mail, Overig) lees je direct
    - het topic-pillars document in `Resources/Input/`
-   - de klanttaal in `Resources/Input/07 - Voice of the Customer/` (reviews, quotes, vragen van klanten, en `_overzicht.md` met de bronnen die elders staan): gebruik de letterlijke woorden van klanten voor hooks, pijnpunten en verlangens, en verzin er geen bij
+   - de klanttaal in `Resources/Input/07 - Voice of the Customer/` (reviews, quotes, vragen van klanten, en `_overzicht.md` met de bronnen die elders staan). Open ook de bronnen die `_overzicht.md` noemt: de Story Vault via de regel `Systeempagina:` van de save-skill (de database volgens de matchregel), en een reeks in het Bronarchief via haar `REEKS.md`. Gebruik de letterlijke woorden van klanten voor hooks, pijnpunten en verlangens, en verzin er geen bij
 3. **Output-map:** `Output/Content/` in de werkmap van je Content Manager. Maak de map aan als die nog niet bestaat.
 
 ## Output
@@ -71,10 +71,11 @@ Lees vóór je begint `Resources/Fundament/werkwijze.md` in de werkmap van je Co
 
 ### Fase 2: uitwerken per gekozen fragment
 
-6. **Mini-briefs in één overzicht.** Werk elk gekozen fragment uit tot een korte brief: topic, pillar, format met framework (het framework kies je stil, uit `frameworks.md`; bij carrousel de slide-mapping uit `carousel.md`), platform, en het definitieve haakje. Toets de set als geheel op de variatie-assen: geen twee stukken met hetzelfde hook-mechanisme of dezelfde opening, elk stuk leunt op andere delen van het anker. Respecteer de grondtoon uit `identiteit.md` (staat "hoe confronterend" op zacht, leid dan niet met een confronterend haakje). Laat het awareness-niveau en de ingang uit `strategie.md` (sectie 4 en 5) de opening sturen: hoe kouder het publiek, hoe meer je opent op probleem en nieuwsgierigheid; hoe warmer, hoe meer op bewijs en contrast. Bij pijn start je bij het herkenbare symptoom, bij verlangen bij wat ze willen. Leg alle briefs in één overzicht voor en wacht op één akkoord; per stuk wisselen van haakje of format kan in die ronde. Levert de gebruiker eigen haakjes of instructies aan, dan zijn die leidend. Zegt de gebruiker "kies jij maar", pak je eigen aanbevelingen en ga door.
+6. **Mini-briefs in één overzicht.** Werk elk gekozen fragment uit tot een korte brief: topic, pillar, format met framework (het framework kies je stil, uit `frameworks.md`; bij carrousel de slide-mapping uit `carousel.md`), platform, het definitieve haakje en een voorgestelde call to action. Voor de CTA geldt hetzelfde als bij de Content Creator: één voorstel, afgeleid uit pillar en platform (bij een oogst-slot ook uit de Notities), geen CTA is een volwaardige keuze, en de gebruiker kiest. Toets de set als geheel op de variatie-assen: geen twee stukken met hetzelfde hook-mechanisme of dezelfde opening, elk stuk leunt op andere delen van het anker. Respecteer de grondtoon uit `identiteit.md` (staat "hoe confronterend" op zacht, leid dan niet met een confronterend haakje). Laat het awareness-niveau en de ingang uit `strategie.md` (sectie 4 en 5) de opening sturen: hoe kouder het publiek, hoe meer je opent op probleem en nieuwsgierigheid; hoe warmer, hoe meer op bewijs en contrast. Bij pijn start je bij het herkenbare symptoom, bij verlangen bij wat ze willen. Leg alle briefs in één overzicht voor en wacht op één akkoord; per stuk wisselen van haakje, format of CTA kan in die ronde. Levert de gebruiker eigen haakjes of instructies aan, dan zijn die leidend. Zegt de gebruiker "kies jij maar", pak je eigen aanbevelingen en ga door.
 7. **Concepten schrijven (de "befores").** Schrijf per stuk één sterke versie in de Brand Voice, zoals de Content Creator dat doet: de beats van het gekozen framework, het gekozen hook-mechanisme, waar passend de villain-overlay uit `villain.md` (sla over als het topic geen villain heeft), de platform-toon en technische deltas uit `platforms.md`, en de kwaliteitslat van `micro-specificity.md` (laag 3-4, concreet anker, vermijd de AI-vormen). Extra regels die alleen hier gelden:
    - **Niets letterlijk uit het anker.** Elke post krijgt een eigen formulering en een eigen invalshoek; het anker is grondstof, geen tekstbron. Uitzondering: een bewust gekozen quote in een quote-post.
    - **Elk stuk staat los.** Een lezer die het anker nooit zag moet de post volledig begrijpen.
+   - **De gekozen CTA.** Sluit af met de CTA uit de brief; bij geen CTA laat je het CTA-beat van het framework weg.
    - **Geen herhaling over de set.** Verschillende openingen, verschillende kernpunten, verschillende voorbeelden.
 8. **Presenteren en opslaan.** Presenteer de concepten per stuk, met per stuk in één regel uit welk fragment het komt. Sluit af met een kort overzicht: anker, aantal stukken, gebruikte invalshoeken. Sla elk stuk op als `Output/Content/JJJJ-MM-DD-[slug].md` in dit format:
 
@@ -88,6 +89,7 @@ Lees vóór je begint `Resources/Fundament/werkwijze.md` in de werkmap van je Co
    topic: [topic uit het topic-pillars document]
    pillar: [Authority, Connection, Vision, Embodiment of Launch]
    hook: [gekozen mechanisme, bijv. Reframe]
+   cta: [gekozen CTA, of: geen]
    format: [gekozen format]
    framework: [gekozen framework]
    platform: [platform]
