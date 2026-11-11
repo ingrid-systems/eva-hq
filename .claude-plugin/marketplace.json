@@ -32,7 +32,7 @@
       "name": "eva-hq-content",
       "source": "./plugins/eva-hq-content",
       "description": "Het contentsysteem van EVA HQ (Content Creation): briefing, inspire, ideate, content-creator, repurpose en planner. In 1x toevoegen; werkt samen met je eigen save-skill.",
-      "version": "0.1.4",
+      "version": "0.1.5",
       "author": {
         "name": "Ingrid Staal"
       },
@@ -102,6 +102,24 @@
         "salespage",
         "verkooppagina",
         "copywriting"
+      ]
+    },
+    {
+      "name": "eva-hq-extra",
+      "source": "./plugins/eva-hq-extra",
+      "description": "Extra van EVA HQ: @indexeer houdt je Bronarchief bij (indextabel, distillaat per reeks) en zet bij reeksen met klanttaal de uitspraken van klanten uit nieuwe calls in je database Klanttaal. Werkt samen met je eigen save-skill.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Ingrid Staal"
+      },
+      "homepage": "https://e-va.nl",
+      "category": "productivity",
+      "tags": [
+        "eva hq",
+        "bronarchief",
+        "indexeer",
+        "klanttaal",
+        "voice of the customer"
       ]
     }
   ]
