@@ -1,7 +1,7 @@
 {
   "name": "eva-hq-assistants",
-  "version": "0.1.2",
-  "description": "De assistenten van EVA HQ (module HQ Assistants): uitvoerende skills die voor elke medewerker werken en zelf nergens in een map schrijven. Nu: de Salespage Assistant (LOES AI B*tch, partnerskill van Marloes), die je Ideale Salespagina blok voor blok schrijft op basis van je Offer Snapshot, je Ideale Klant Profiel en je Brand Voice Guide uit About Me. De vragen en schrijfinstructies per blok komen live van de server van Marloes.",
+  "version": "0.2.0",
+  "description": "De assistenten van EVA HQ (module HQ Assistants): uitvoerende skills die voor elke medewerker werken en het resultaat na akkoord wegschrijven op de plek waar het hoort. De Salespage Assistant (LOES AI B*tch, partnerskill van Marloes) schrijft je Ideale Salespagina blok voor blok op basis van je Offer Snapshot, je Ideale Klant Profiel en je Brand Voice Guide uit About Me; de vragen en schrijfinstructies per blok komen live van de server van Marloes. De Funnel Assistant schrijft de mailreeks van een funnel mail voor mail, volgens een funnelblauwdruk uit je eigen map en in je eigen stem.",
   "author": {
     "name": "Ingrid Staal"
   },
@@ -13,6 +13,9 @@
     "salespage",
     "verkooppagina",
     "copywriting",
-    "loes ai bitch"
+    "loes ai bitch",
+    "funnel",
+    "mailreeks",
+    "e-mail"
   ]
 }
